@@ -23,10 +23,12 @@ VT_SYMBOL: str = f"{SYMBOL}.{EXCHANGE_STR}"                  # "FG00.CZCE"
 
 CONTRACT_SIZE: float = 20.0        # 合约乘数：20 吨/手
 PRICE_TICK: float = 1.0            # 最小变动价位：1 元/吨
-# 手续费近似为成交额比例（FG 约 6 元/手，名义额 ~2 万/手 -> ~3e-4）。
-# 这里放大到含滑点的综合成本，多空各按成交额比例收取。
-LONG_RATE: float = 2.5e-4
-SHORT_RATE: float = 2.5e-4
+# 手续费（郑商所玻璃）：开仓/平仓（含平今）各 2 元/手，一开一平 4 元/手
+# vnpy 按成交额×费率计费，用参考价折算（滑点由 PRICE_ADD_TICKS 单独模拟）
+COMMISSION_YUAN_PER_LOT: float = 2.0
+COMMISSION_REF_PRICE: float = 1000.0
+LONG_RATE: float = COMMISSION_YUAN_PER_LOT / (COMMISSION_REF_PRICE * CONTRACT_SIZE)
+SHORT_RATE: float = LONG_RATE
 
 # ----------------------------------------------------------------------------
 # 样本划分（预留 2013 年数据做 60 日因子预热，训练标签从 2014 起）
@@ -48,33 +50,60 @@ LABEL_HOLD: int = 2
 LABEL_EXPR: str = f"ts_delay(close, -{1 + LABEL_HOLD}) / ts_delay(close, -1) - 1"
 
 # ----------------------------------------------------------------------------
-# LightGBM 超参数
-#   已按"低配机器"调轻：迭代轮数不高、学习率略大、配合早停，
-#   3000 多根日线 + 约 40 因子，训练通常在数十秒内完成，内存占用很小。
-#   若想更充分拟合，可把 num_boost_round 调到 1500~2000、learning_rate 降到 0.02。
-#   限制并行线程避免弱 CPU 卡死：运行前可设环境变量 OMP_NUM_THREADS=2。
+# LightGBM 超参数（GlassLgbModel：强正则 + 训练集内时间切分早停）
 # ----------------------------------------------------------------------------
 LGB_PARAMS: dict = {
-    "learning_rate": 0.05,
-    "num_leaves": 31,
-    "num_boost_round": 500,
-    "early_stopping_rounds": 50,
-    "log_evaluation_period": 50,
+    "learning_rate": 0.02,
+    "num_leaves": 8,
+    "num_boost_round": 400,
+    "early_stopping_rounds": 60,
+    "log_evaluation_period": 0,
     "seed": 20260703,
+    "min_data_in_leaf": 80,
+    "lambda_l1": 0.5,
+    "lambda_l2": 0.5,
+    "max_depth": 4,
+    "feature_fraction": 0.7,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 5,
+    "valid_ratio": 0.15,
 }
+
+# ----------------------------------------------------------------------------
+# 信号后处理：因果滚动 z-score（消除训练期偏多偏差，便于设统一阈值）
+# ----------------------------------------------------------------------------
+SIGNAL_ZSCORE_WINDOW: int = 60
+SIGNAL_ZSCORE_MIN_PERIODS: int = 20
 
 # ----------------------------------------------------------------------------
 # 策略参数
 # ----------------------------------------------------------------------------
 CAPITAL: int = 1_000_000           # 初始资金
-POSITION_PCT: float = 0.90         # 单边最大仓位占用资金比例
-SIGNAL_THRESHOLD: float = 0.0      # 信号死区：|pred|<=阈值 则空仓；0 表示纯多空翻转
-PRICE_ADD_TICKS: int = 2           # 下单超价（滑点）跳数，PRICE_TICK 的倍数
+POSITION_PCT: float = 0.95         # 单边最大仓位占用资金比例
+SIGNAL_THRESHOLD: float = 0.0     # confirm 模式：AI 同向确认阈值（z-score）
+LMS_VETO_THRESHOLD: float = 1.5   # veto 模式：AI 强烈反向时否决开仓（z-score）
+LMS_AI_MODE: str = "off"          # "off" 纯规则最优；"veto"/"confirm" 可开 AI 辅助
+PRICE_ADD_TICKS: int = 1           # 下单超价（滑点）跳数
+USE_REGIME_FILTER: bool = True     # 三均线趋势过滤（推荐开启）
 
 # 命名，便于落盘 / 复用
 DATASET_NAME: str = "glass_alpha"
 MODEL_NAME: str = "glass_lgb"
 SIGNAL_NAME: str = "glass_lgb_signal"
+
+# ----------------------------------------------------------------------------
+# LMS 战法（长/中/短三均线趋势）—— 规则层参数
+#   ⚠️ 这是对 "LMS" 的通用解读（L=长、M=中、S=短均线），非某博主专有规则。
+#      拿到确切规则后，改 lms.py 里的判定逻辑即可，其余无需动。
+#   多头排列：ma_S > ma_M > ma_L 且 收盘 > ma_M  -> 只做多
+#   空头排列：ma_S < ma_M < ma_L 且 收盘 < ma_M  -> 只做空
+#   其余（均线缠绕/震荡）                        -> 空仓
+# ----------------------------------------------------------------------------
+LMS_SHORT: int = 8         # 短期均线（样本外调优：8/21/55 > 5/20/60）
+LMS_MEDIUM: int = 21       # 中期均线
+LMS_LONG: int = 55         # 长期均线
+LMS_USE_AI: bool = False           # False=纯三均线（8/21/55 样本外约 +73%）
+LMS_REGIME_COL: str = "lms_regime"
 
 
 def ensure_dirs() -> None:

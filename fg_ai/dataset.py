@@ -30,8 +30,8 @@ from vnpy.alpha.dataset.processor import (
 import config
 
 
-# 时序窗口（交易日）
-WINDOWS: list[int] = [5, 10, 20, 60]
+# 时序窗口（交易日）—— 去掉 5 日减少共线性、降低过拟合
+WINDOWS: list[int] = [10, 20, 60]
 EPS: str = "1e-12"
 
 
@@ -88,11 +88,10 @@ class GlassAlphaDataset(AlphaDataset):
         for w in WINDOWS:
             self.add_feature(f"mind_{w}", f"ts_min(low, {w}) / close - 1")
 
-        # -------- 摆动指标 RSI / ATR --------
-        for w in [6, 14, 24]:
-            self.add_feature(f"rsi_{w}", f"ta_rsi(close, {w}) / 100")
+        # -------- 摆动指标 RSI / ATR（保留中长周期）--------
         for w in [14, 24]:
-            self.add_feature(f"atr_{w}", f"ta_atr(high, low, close, {w}) / close")
+            self.add_feature(f"rsi_{w}", f"ta_rsi(close, {w}) / 100")
+        self.add_feature("atr_14", "ta_atr(high, low, close, 14) / close")
 
         # -------- 量能：成交量均线比、量价相关 --------
         for w in WINDOWS:
@@ -101,8 +100,7 @@ class GlassAlphaDataset(AlphaDataset):
             self.add_feature(f"vcorr_{w}", f"ts_corr(close, ts_log(volume + 1), {w})")
 
         # -------- 持仓量变化 --------
-        for w in [5, 20]:
-            self.add_feature(f"oi_{w}", f"open_interest / ts_delay(open_interest, {w}) - 1")
+        self.add_feature("oi_20", "open_interest / ts_delay(open_interest, 20) - 1")
 
         # -------- 标签：见 config.LABEL_EXPR --------
         self.set_label(config.LABEL_EXPR)

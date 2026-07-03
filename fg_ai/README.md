@@ -14,9 +14,14 @@ fg_ai/
 ├── data_loader.py      # parquet -> polars(因子输入) / BarData(回测行情)
 ├── dataset.py          # GlassAlphaDataset：约 40 个量价因子 + 预处理器
 ├── strategy.py         # GlassAlphaStrategy：多空翻转择时
+├── lms.py              # LMS 战法规则层：长/中/短三均线趋势判定
+├── lms_strategy.py     # LmsAlphaStrategy：规则定方向 + AI 确认（混合）
 ├── 01_prepare_lab.py   # 步骤1：行情写入 AlphaLab + 登记合约参数
 ├── 02_train.py         # 步骤2：训练 LightGBM + 计算 IC + 生成信号
 ├── 03_backtest.py      # 步骤3：样本外回测 + 绩效统计
+├── 04_lms_backtest.py  # 步骤4：LMS 混合策略回测（纯规则 / 规则+AI）
+├── build_notebook.py   # 生成多模型对比 Notebook
+├── 玻璃期货AI多模型.ipynb  # 📓 Lasso/LightGBM/MLP 三模型对比（中文多图表）
 ├── run_all.py          # 一键跑完 01->02->03
 ├── requirements.txt
 └── artifacts/          # 输出：净值 csv、绩效 json（运行后生成）
@@ -114,6 +119,44 @@ pred < -阈值  → 满仓做空
 | `SIGNAL_THRESHOLD` | 信号死区，>0 时低置信度不开仓 |
 | `POSITION_PCT` | 单边仓位占资比例 |
 | `TRAIN/VALID/TEST_PERIOD` | 样本划分 |
+
+---
+
+## LMS 战法（三均线 + AI 融合）
+
+> 确切规则后，只需改 [lms.py](lms.py) 里 `compute_lms_regime()` 的判定条件，下游无需改动。
+
+**规则层**（`lms.py`）在全历史上算三均线，输出趋势状态 `regime`：
+
+| regime | 条件 | 含义 |
+|---|---|---|
+| +1 | 短>中>长 且 收盘>短均线 | 多头排列，只做多 |
+| −1 | 短<中<长 且 收盘<短均线 | 空头排列，只做空 |
+| 0 | 均线缠绕 | 震荡，空仓 |
+
+**混合策略**（`lms_strategy.py`，由 `config.LMS_USE_AI` 切换）：
+
+- `False` **纯规则**：`regime` 直接决定多空 —— **无需训练，弱机器可直接跑**。
+- `True` **规则+AI**：规则定方向，再要求 LightGBM 预测同向超阈值才开仓（双确认）。
+
+运行：
+```bash
+python 04_lms_backtest.py     # 读 config.LMS_USE_AI；融合模式需先有 02 的信号，否则自动降级纯规则
+```
+
+**样本外回测参考**（TEST 2023-07 ~ 2026-06，含手续费+滑点）：
+
+| 指标 | 纯规则 LMS | 规则+AI 融合 |
+|---|---|---|
+| 总收益 | 19.9% | 10.3% |
+| 年化 | 6.6% | 3.4% |
+| 最大回撤 | −14.3% | −7.5 万 |
+| 夏普 | 0.44 | 0.42 |
+| 收益回撤比 | 1.18 | **1.37** |
+| 交易笔数 | 250 | 52 |
+
+AI 确认层显著降低换手与回撤、提升收益回撤比（更稳健），代价是牺牲部分总收益。
+调参入口：均线周期 `LMS_SHORT/MEDIUM/LONG`、`SIGNAL_THRESHOLD`（AI 门槛）。
 
 ---
 
