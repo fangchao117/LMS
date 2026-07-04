@@ -27,7 +27,7 @@ LONG_RATE: float = COMMISSION_YUAN_PER_LOT / (COMMISSION_REF_PRICE * CONTRACT_SI
 SHORT_RATE: float = LONG_RATE
 
 # 小资金
-CAPITAL: int = 10_000
+CAPITAL: int = 10000
 MARGIN_RATE: float = 0.14          # 郑商所玻璃保证金比例 14%
 POSITION_PCT: float = 0.95         # 可用资金用于保证金的比例
 MAX_LOTS: int = 1                  # 小资金默认 1 手封顶（防爆仓）

@@ -20,6 +20,11 @@ def _read() -> pd.DataFrame:
     return df.reset_index(drop=True)
 
 
+def load_dataframe() -> pd.DataFrame:
+    """完整 OHLCV + 持仓量，供多因子计算。"""
+    return _read()
+
+
 def load_arrays() -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     """返回 (datetime[ns], close, returns)。returns[0]=0（首根无前值）。"""
     df = _read()

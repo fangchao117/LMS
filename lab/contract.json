@@ -1,7 +1,7 @@
 {
     "FG00.CZCE": {
-        "long_rate": 0.00025,
-        "short_rate": 0.00025,
+        "long_rate": 0.0001,
+        "short_rate": 0.0001,
         "size": 20.0,
         "pricetick": 1.0
     }
