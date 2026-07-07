@@ -1,12 +1,11 @@
 """
-LMS 自适应滤波策略（vnpy.alpha 回测框架）
+LMS + 多因子融合策略（vnpy.alpha）
 
-信号 signal = 滤波器对下一根的预测（收益或相对价格变化）：
-    signal >  阈值 -> 满仓做多
-    signal < -阈值 -> 满仓做空
-    |signal| ≤ 阈值 -> 空仓
+signal >  阈值 -> 按净值比例满仓做多
+signal < -阈值 -> 按净值比例满仓做空
+|signal| ≤ 阈值 -> 空仓
 
-撮合时序：T 收盘出信号 -> T+1 成交，无未来函数。
+手数随账户净值动态缩放，无固定手数上限。
 """
 from __future__ import annotations
 
@@ -17,14 +16,17 @@ import config
 
 
 class LmsFilterStrategy(AlphaStrategy):
-    """最小均方自适应滤波择时。"""
+    """LMS 自适应滤波 + 多因子融合择时。"""
 
     signal_threshold: float = config.SIGNAL_THRESHOLD
     position_pct: float = config.POSITION_PCT
     price_add_ticks: int = config.PRICE_ADD_TICKS
 
     def on_init(self) -> None:
-        self.write_log("LMS 自适应滤波策略初始化")
+        self.write_log(
+            f"LMS 多因子策略 模式={config.SIGNAL_MODE} "
+            f"阈值={self.signal_threshold} 仓位={self.position_pct:.0%}"
+        )
 
     def on_bars(self, bars: dict[str, BarData]) -> None:
         bar = bars.get(config.VT_SYMBOL)
@@ -36,7 +38,9 @@ class LmsFilterStrategy(AlphaStrategy):
             return
 
         val = sig["signal"][0]
-        pred = float(val) if val is not None else 0.0
+        if val is None or val != val:
+            return
+        pred = float(val)
 
         direction = 0
         if pred > self.signal_threshold:

@@ -1,11 +1,12 @@
 """
-回测 —— LMS 自适应滤波策略（TEST 段样本外）
+回测 —— LMS + 多因子融合（VALID 调阈值 + TEST 样本外）
 
-流程：生成信号 -> 写入 AlphaLab 行情/合约 -> 回测 -> 打印绩效 + 存结果。
     python backtest.py
+    python backtest.py --no-tune
 """
 from __future__ import annotations
 
+import argparse
 import json
 from datetime import datetime
 
@@ -25,28 +26,93 @@ def _to_dt(s: str) -> datetime:
     return datetime.strptime(s, "%Y-%m-%d")
 
 
-def main() -> dict:
+def _run(
+    signal_df: pl.DataFrame,
+    start: str,
+    end: str,
+    lab: AlphaLab,
+    threshold: float,
+) -> dict:
+    engine = BacktestingEngine(lab)
+    engine.set_parameters(
+        vt_symbols=[config.VT_SYMBOL],
+        interval=Interval.DAILY,
+        start=_to_dt(start),
+        end=_to_dt(end),
+        capital=config.CAPITAL,
+        annual_days=240,
+    )
+    engine.add_strategy(
+        LmsFilterStrategy,
+        {
+            "signal_threshold": threshold,
+            "position_pct": config.POSITION_PCT,
+            "price_add_ticks": config.PRICE_ADD_TICKS,
+        },
+        signal_df,
+    )
+    engine.load_data()
+    engine.run_backtesting()
+    engine.calculate_result()
+    return engine.calculate_statistics()
+
+
+def tune_threshold(signal_df: pl.DataFrame, lab: AlphaLab) -> tuple[float, dict]:
+    """VALID 段扫描阈值，取总收益最高者。"""
+    best_th = config.SIGNAL_THRESHOLD
+    best_stats: dict = {}
+    best_ret = float("-inf")
+
+    print("[backtest] VALID 段阈值扫描（收益最大化）…")
+    for th in config.THRESHOLD_CANDIDATES:
+        stats = _run(signal_df, config.VALID_PERIOD[0], config.VALID_PERIOD[1], lab, th)
+        ret = float(stats.get("total_return", 0) or 0)
+        print(f"    阈值 {th:.1f} -> 总收益 {ret:.1f}%  夏普 {stats.get('sharpe_ratio', 0):.2f}")
+        if ret > best_ret:
+            best_ret = ret
+            best_th = th
+            best_stats = stats
+
+    print(f"[backtest] 最优阈值 {best_th}（VALID 总收益 {best_ret:.1f}%）")
+    return best_th, best_stats
+
+
+def main(tune: bool = True) -> dict:
     config.ensure_dirs()
 
-    signal_df, dt, close, returns = build_signal_df()
+    signal_df, _, _, _ = build_signal_df()
 
     lab = AlphaLab(str(config.LAB_PATH))
     lab.save_bar_data(data.build_bars())
-    lab.add_contract_setting(config.VT_SYMBOL, config.LONG_RATE, config.SHORT_RATE,
-                             config.CONTRACT_SIZE, config.PRICE_TICK)
+    lab.add_contract_setting(
+        config.VT_SYMBOL, config.LONG_RATE, config.SHORT_RATE,
+        config.CONTRACT_SIZE, config.PRICE_TICK,
+    )
+
+    tune_info: dict | None = None
+    threshold = config.SIGNAL_THRESHOLD
+    if tune and config.TUNE_THRESHOLD:
+        threshold, valid_stats = tune_threshold(signal_df, lab)
+        tune_info = {"best_threshold": threshold, "valid_stats": valid_stats}
 
     engine = BacktestingEngine(lab)
     engine.set_parameters(
-        vt_symbols=[config.VT_SYMBOL], interval=Interval.DAILY,
-        start=_to_dt(config.TEST_PERIOD[0]), end=_to_dt(config.TEST_PERIOD[1]),
-        capital=config.CAPITAL, annual_days=240,
+        vt_symbols=[config.VT_SYMBOL],
+        interval=Interval.DAILY,
+        start=_to_dt(config.TEST_PERIOD[0]),
+        end=_to_dt(config.TEST_PERIOD[1]),
+        capital=config.CAPITAL,
+        annual_days=240,
     )
-    engine.add_strategy(LmsFilterStrategy, {
-        "signal_threshold": config.SIGNAL_THRESHOLD,
-        "position_pct": config.POSITION_PCT,
-        "price_add_ticks": config.PRICE_ADD_TICKS,
-    }, signal_df)
-
+    engine.add_strategy(
+        LmsFilterStrategy,
+        {
+            "signal_threshold": threshold,
+            "position_pct": config.POSITION_PCT,
+            "price_add_ticks": config.PRICE_ADD_TICKS,
+        },
+        signal_df,
+    )
     engine.load_data()
     engine.run_backtesting()
 
@@ -60,16 +126,25 @@ def main() -> dict:
     def _fmt(v):
         return v.isoformat() if isinstance(v, datetime) else v
 
+    out = {
+        "signal_mode": config.SIGNAL_MODE,
+        "factor_weights": config.FACTOR_WEIGHTS,
+        "position_pct": config.POSITION_PCT,
+        "threshold": threshold,
+        "tune": tune_info,
+        **{k: _fmt(v) for k, v in stats.items()},
+    }
     (config.ARTIFACT_PATH / f"lms_{tag}_stats.json").write_text(
-        json.dumps({k: _fmt(v) for k, v in stats.items()},
-                   ensure_ascii=False, indent=2, default=str),
+        json.dumps(out, ensure_ascii=False, indent=2, default=str),
         encoding="utf-8",
     )
 
-    print(f"\n[backtest] LMS 自适应滤波（mode={tag}，TEST 段）：")
-    for k in ("start_date", "end_date", "total_return", "annual_return",
-              "max_drawdown", "sharpe_ratio", "return_drawdown_ratio",
-              "total_trade_count", "total_commission"):
+    print(f"\n[backtest] LMS 多因子（mode={tag}，阈值={threshold}，TEST 段）：")
+    for k in (
+        "start_date", "end_date", "total_return", "annual_return",
+        "max_drawdown", "sharpe_ratio", "return_drawdown_ratio",
+        "total_trade_count", "total_commission", "end_balance",
+    ):
         if k in stats:
             print(f"    {k:<22} {stats[k]}")
     print(f"\n[backtest] 结果已存至 {config.ARTIFACT_PATH}")
@@ -77,4 +152,7 @@ def main() -> dict:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--no-tune", action="store_true", help="跳过 VALID 阈值扫描")
+    args = parser.parse_args()
+    main(tune=not args.no_tune)
