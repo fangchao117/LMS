@@ -1,0 +1,81 @@
+{
+  "spec": {
+    "mode": "donchian_baseline",
+    "donchian": 38,
+    "daily_filter": false,
+    "threshold": 0.28,
+    "smooth": 3,
+    "max_lots": 2,
+    "use_risk": true,
+    "atr_stop_mult": 3.5,
+    "trail_atr_mult": 4.0,
+    "max_loss_pct": 6.0
+  },
+  "roll_model": "平旧仓→新合约开仓，未复权，换月额外手续费",
+  "full_stats": {
+    "capital": 10000.0,
+    "end_equity": 31980.4,
+    "total_return_pct": 219.80400000000003,
+    "max_ddpercent": -66.80966254502077,
+    "sharpe_ratio": 2.566908323309881,
+    "total_trades": 241,
+    "stop_hits": 99,
+    "roll_closes": 3,
+    "bars": 4328,
+    "max_lots": 2
+  },
+  "test_stats": {
+    "capital": 10000.0,
+    "end_equity": 16956.4,
+    "total_return_pct": 69.56400000000001,
+    "max_ddpercent": -52.255616811903494,
+    "sharpe_ratio": 1.8971576472183307,
+    "total_trades": 65,
+    "stop_hits": 28,
+    "roll_closes": 1,
+    "bars": 1534,
+    "max_lots": 2
+  },
+  "segments": [
+    {
+      "symbol": "FG509",
+      "start": "2025-06-20",
+      "end": "2025-08-14",
+      "return_pct": 70.38,
+      "max_dd_pct": -66.80966254502077,
+      "trades": 45
+    },
+    {
+      "symbol": "FG601",
+      "start": "2025-08-15",
+      "end": "2025-12-14",
+      "return_pct": 45.228,
+      "max_dd_pct": -74.11959837692149,
+      "trades": 57
+    },
+    {
+      "symbol": "FG605",
+      "start": "2025-12-15",
+      "end": "2026-04-14",
+      "return_pct": 15.263999999999989,
+      "max_dd_pct": -73.51971059211576,
+      "trades": 63
+    },
+    {
+      "symbol": "FG609",
+      "start": "2026-04-15",
+      "end": "2026-08-14",
+      "return_pct": 71.54400000000001,
+      "max_dd_pct": -51.50001460578974,
+      "trades": 57
+    }
+  ],
+  "roll_info": {
+    "current": "FG609",
+    "segment_start": "2026-04-15",
+    "segment_end": "2026-08-14",
+    "days_to_roll": 36,
+    "next_symbol": "FG701",
+    "action_on_roll": "平旧仓 → 新合约按信号开仓"
+  }
+}

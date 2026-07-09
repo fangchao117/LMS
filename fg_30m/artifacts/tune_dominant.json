@@ -1,0 +1,203 @@
+{
+  "dominant_period": [
+    "2025-06-20",
+    "2026-07-08"
+  ],
+  "segments": [
+    [
+      "FG509",
+      "2025-06-20",
+      "2025-08-14"
+    ],
+    [
+      "FG601",
+      "2025-08-15",
+      "2025-12-14"
+    ],
+    [
+      "FG605",
+      "2025-12-15",
+      "2026-04-14"
+    ],
+    [
+      "FG609",
+      "2026-04-15",
+      "2026-07-08"
+    ]
+  ],
+  "best": {
+    "label": "daily_ema_don_20_L1",
+    "mode": "daily_filter_donchian",
+    "max_lots": 1,
+    "params": {
+      "donchian": 20,
+      "ema_fast": 26,
+      "ema_slow": 46
+    },
+    "tune_ret": 39.11643303754815,
+    "full_ret": 71.21310804598878,
+    "test_ret": 3.9791212469595827,
+    "full_dd": -47.72928603442,
+    "full_trades": 56,
+    "score": 46.56013645414394
+  },
+  "top10": [
+    {
+      "label": "daily_ema_don_20_L1",
+      "mode": "daily_filter_donchian",
+      "max_lots": 1,
+      "params": {
+        "donchian": 20,
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "tune_ret": 39.11643303754815,
+      "full_ret": 71.21310804598878,
+      "test_ret": 3.9791212469595827,
+      "full_dd": -47.72928603442,
+      "full_trades": 56,
+      "score": 46.56013645414394
+    },
+    {
+      "label": "daily_ema_don_20_L2",
+      "mode": "daily_filter_donchian",
+      "max_lots": 2,
+      "params": {
+        "donchian": 20,
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "tune_ret": 39.11643303754815,
+      "full_ret": 71.21310804598878,
+      "test_ret": 3.9791212469595827,
+      "full_dd": -47.72928603442,
+      "full_trades": 56,
+      "score": 46.56013645414394
+    },
+    {
+      "label": "daily_ema_don_40_L1",
+      "mode": "daily_filter_donchian",
+      "max_lots": 1,
+      "params": {
+        "donchian": 40,
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "tune_ret": 35.931147447281916,
+      "full_ret": 68.30520754108966,
+      "test_ret": 2.3344845030116357,
+      "full_dd": -59.56017690100397,
+      "full_trades": 42,
+      "score": 40.186354318586936
+    },
+    {
+      "label": "daily_ema_don_40_L2",
+      "mode": "daily_filter_donchian",
+      "max_lots": 2,
+      "params": {
+        "donchian": 40,
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "tune_ret": 35.931147447281916,
+      "full_ret": 68.30520754108966,
+      "test_ret": 2.3344845030116357,
+      "full_dd": -59.56017690100397,
+      "full_trades": 42,
+      "score": 40.186354318586936
+    },
+    {
+      "label": "ema_don_both_26_L1",
+      "mode": "ema_donchian_both",
+      "max_lots": 1,
+      "params": {
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "donchian": 20
+      },
+      "tune_ret": 18.789316342827256,
+      "full_ret": 57.60276337631638,
+      "test_ret": 12.755202374845442,
+      "full_dd": -64.91815006522745,
+      "full_trades": 57,
+      "score": 27.183287517204484
+    },
+    {
+      "label": "ema_don_both_26_L2",
+      "mode": "ema_donchian_both",
+      "max_lots": 2,
+      "params": {
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "donchian": 20
+      },
+      "tune_ret": 18.789316342827256,
+      "full_ret": 57.60276337631638,
+      "test_ret": 12.755202374845442,
+      "full_dd": -64.91815006522745,
+      "full_trades": 57,
+      "score": 27.183287517204484
+    },
+    {
+      "label": "ema_don_both_26_L3",
+      "mode": "ema_donchian_both",
+      "max_lots": 3,
+      "params": {
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "donchian": 20
+      },
+      "tune_ret": 18.789316342827256,
+      "full_ret": 57.60276337631638,
+      "test_ret": 12.755202374845442,
+      "full_dd": -64.91815006522745,
+      "full_trades": 57,
+      "score": 27.183287517204484
+    },
+    {
+      "label": "daily_ema_26_46_L1",
+      "mode": "daily_filter_ema",
+      "max_lots": 1,
+      "params": {
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "tune_ret": 36.659855514982965,
+      "full_ret": 59.76789434746455,
+      "test_ret": -3.087493099684868,
+      "full_dd": -65.08204459315284,
+      "full_trades": 69,
+      "score": 22.099700046509966
+    },
+    {
+      "label": "daily_ema_26_46_L2",
+      "mode": "daily_filter_ema",
+      "max_lots": 2,
+      "params": {
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "tune_ret": 36.659855514982965,
+      "full_ret": 59.76789434746455,
+      "test_ret": -3.087493099684868,
+      "full_dd": -65.08204459315284,
+      "full_trades": 69,
+      "score": 22.099700046509966
+    },
+    {
+      "label": "daily_ema_26_46_L3",
+      "mode": "daily_filter_ema",
+      "max_lots": 3,
+      "params": {
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "tune_ret": 36.659855514982965,
+      "full_ret": 59.76789434746455,
+      "test_ret": -3.087493099684868,
+      "full_dd": -65.08204459315284,
+      "full_trades": 69,
+      "score": 22.099700046509966
+    }
+  ]
+}

@@ -49,7 +49,10 @@ def _run(
             "position_pct": config.POSITION_PCT,
             "margin_rate": config.MARGIN_RATE,
             "max_lots": ml,
+            "capital_max": config.CAPITAL_MAX,
             "price_add_ticks": config.PRICE_ADD_TICKS,
+            "stop_loss_pct": config.STOP_LOSS_PCT,
+            "max_drawdown_pct": config.MAX_DRAWDOWN_PCT,
         },
         signal_df,
     )
@@ -169,7 +172,10 @@ def main(tune: bool = True) -> dict:
             "position_pct": config.POSITION_PCT,
             "margin_rate": config.MARGIN_RATE,
             "max_lots": config.MAX_LOTS,
+            "capital_max": config.CAPITAL_MAX,
             "price_add_ticks": config.PRICE_ADD_TICKS,
+            "stop_loss_pct": config.STOP_LOSS_PCT,
+            "max_drawdown_pct": config.MAX_DRAWDOWN_PCT,
         },
         signal_df,
     )
@@ -226,5 +232,10 @@ def main(tune: bool = True) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--tune", action="store_true", help="TRAIN 段扫描均线（实验性）")
+    parser.add_argument("--tune-valid", action="store_true", help="VALID 段收益最大化扫描")
     args = parser.parse_args()
-    main(tune=args.tune)
+    if args.tune_valid:
+        from tune_valid import main as tune_valid_main
+        tune_valid_main(quick=False)
+    else:
+        main(tune=args.tune)

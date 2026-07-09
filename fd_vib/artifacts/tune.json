@@ -1,0 +1,271 @@
+{
+  "period": [
+    "2025-06-20",
+    "2026-07-08"
+  ],
+  "segments": [
+    [
+      "FG509",
+      "2025-06-20",
+      "2025-08-14"
+    ],
+    [
+      "FG601",
+      "2025-08-15",
+      "2025-12-14"
+    ],
+    [
+      "FG605",
+      "2025-12-15",
+      "2026-04-14"
+    ],
+    [
+      "FG609",
+      "2026-04-15",
+      "2026-08-14"
+    ]
+  ],
+  "adjust": false,
+  "best_score": {
+    "spec": {
+      "mode": "donchian_baseline",
+      "donchian": 38,
+      "daily_filter": false,
+      "threshold": 0.28,
+      "smooth": 3,
+      "max_lots": 2,
+      "use_risk": true,
+      "atr_stop_mult": 3.5,
+      "trail_atr_mult": 4.0,
+      "max_loss_pct": 6.0
+    },
+    "full_ret": 174.16400000000004,
+    "full_dd": -66.80966254502077,
+    "test_ret": 9.724,
+    "trades": 233,
+    "roll_closes": 3,
+    "score": 70.81425016890935
+  },
+  "best_return": {
+    "spec": {
+      "mode": "donchian_baseline",
+      "donchian": 38,
+      "daily_filter": false,
+      "threshold": 0.28,
+      "smooth": 3,
+      "max_lots": 2,
+      "use_risk": true,
+      "atr_stop_mult": 4.0,
+      "trail_atr_mult": 4.0,
+      "max_loss_pct": 6.0
+    },
+    "full_ret": 175.00400000000002,
+    "full_dd": -66.80966254502077,
+    "test_ret": 8.323999999999998,
+    "trades": 231,
+    "roll_closes": 3,
+    "score": 70.78410211345218
+  },
+  "top10_score": [
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": false,
+        "threshold": 0.28,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": false,
+        "threshold": 0.28,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": false,
+        "threshold": 0.38,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": false,
+        "threshold": 0.38,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": true,
+        "threshold": 0.28,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": true,
+        "threshold": 0.28,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": true,
+        "threshold": 0.38,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": true,
+        "threshold": 0.38,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 3.5,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 174.16400000000004,
+      "full_dd": -66.80966254502077,
+      "test_ret": 9.724,
+      "trades": 233,
+      "roll_closes": 3,
+      "score": 70.81425016890935
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": false,
+        "threshold": 0.28,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 4.0,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 175.00400000000002,
+      "full_dd": -66.80966254502077,
+      "test_ret": 8.323999999999998,
+      "trades": 231,
+      "roll_closes": 3,
+      "score": 70.78410211345218
+    },
+    {
+      "spec": {
+        "mode": "donchian_baseline",
+        "donchian": 38,
+        "daily_filter": false,
+        "threshold": 0.28,
+        "smooth": 3,
+        "max_lots": 2,
+        "use_risk": true,
+        "atr_stop_mult": 4.0,
+        "trail_atr_mult": 4.0,
+        "max_loss_pct": 6.0
+      },
+      "full_ret": 175.00400000000002,
+      "full_dd": -66.80966254502077,
+      "test_ret": 8.323999999999998,
+      "trades": 231,
+      "roll_closes": 3,
+      "score": 70.78410211345218
+    }
+  ]
+}

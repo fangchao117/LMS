@@ -1,0 +1,299 @@
+{
+  "symbol": "FG609",
+  "baseline": {
+    "valid": {
+      "capital": 10000.0,
+      "end_equity": 15817.2,
+      "total_return_pct": 58.172000000000004,
+      "max_ddpercent": -57.262947504555875,
+      "sharpe_ratio": 2.695356058323403,
+      "total_trades": 87,
+      "bars": 1580,
+      "max_lots": 1
+    },
+    "test": {
+      "capital": 10000.0,
+      "end_equity": 13830.8,
+      "total_return_pct": 38.307999999999986,
+      "max_ddpercent": -58.910837358224356,
+      "sharpe_ratio": 1.1417255136818558,
+      "total_trades": 43,
+      "bars": 905,
+      "max_lots": 1
+    },
+    "ema": {
+      "ema_fast": 12,
+      "ema_slow": 48
+    }
+  },
+  "best_multi": {
+    "threshold": 0.3,
+    "smooth": 3,
+    "weights": {
+      "momentum": 0.3,
+      "ema_trend": 0.3,
+      "vwap_dev": 0.2,
+      "volatility": 0.1,
+      "skew": 0.05,
+      "kurtosis": 0.0,
+      "amihud": 0.05
+    },
+    "valid_return": 3.532000000000002,
+    "valid_dd": -75.55738089650316,
+    "valid_trades": 143,
+    "test_return": 38.267999999999994,
+    "test_dd": -58.278422135424435,
+    "test_trades": 59,
+    "beats_test": false
+  },
+  "top10": [
+    {
+      "threshold": 0.3,
+      "smooth": 3,
+      "weights": {
+        "momentum": 0.3,
+        "ema_trend": 0.3,
+        "vwap_dev": 0.2,
+        "volatility": 0.1,
+        "skew": 0.05,
+        "kurtosis": 0.0,
+        "amihud": 0.05
+      },
+      "valid_return": 3.532000000000002,
+      "valid_dd": -75.55738089650316,
+      "valid_trades": 143,
+      "test_return": 38.267999999999994,
+      "test_dd": -58.278422135424435,
+      "test_trades": 59,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.2,
+      "smooth": 3,
+      "weights": {
+        "momentum": 0.2,
+        "ema_trend": 0.4,
+        "vwap_dev": 0.15,
+        "volatility": 0.15,
+        "skew": 0.0,
+        "kurtosis": 0.0,
+        "amihud": 0.1
+      },
+      "valid_return": -2.2679999999999922,
+      "valid_dd": -77.4003302665723,
+      "valid_trades": 133,
+      "test_return": 37.188,
+      "test_dd": -60.01059633837641,
+      "test_trades": 51,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.2,
+      "smooth": 5,
+      "weights": {
+        "momentum": 0.2,
+        "ema_trend": 0.4,
+        "vwap_dev": 0.15,
+        "volatility": 0.15,
+        "skew": 0.0,
+        "kurtosis": 0.0,
+        "amihud": 0.1
+      },
+      "valid_return": 8.652000000000015,
+      "valid_dd": -72.37089201877934,
+      "valid_trades": 115,
+      "test_return": 37.10799999999998,
+      "test_dd": -59.51021369282393,
+      "test_trades": 43,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.3,
+      "smooth": 5,
+      "weights": {
+        "momentum": 0.3,
+        "ema_trend": 0.3,
+        "vwap_dev": 0.2,
+        "volatility": 0.1,
+        "skew": 0.05,
+        "kurtosis": 0.0,
+        "amihud": 0.05
+      },
+      "valid_return": 16.692000000000018,
+      "valid_dd": -70.1150747986191,
+      "valid_trades": 119,
+      "test_return": 34.707999999999984,
+      "test_dd": -60.83365634037986,
+      "test_trades": 53,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.4,
+      "smooth": 5,
+      "weights": {
+        "momentum": 0.15,
+        "ema_trend": 0.25,
+        "vwap_dev": 0.2,
+        "volatility": 0.1,
+        "skew": 0.15,
+        "kurtosis": 0.1,
+        "amihud": 0.05
+      },
+      "valid_return": 35.972,
+      "valid_dd": -58.02167396818078,
+      "valid_trades": 87,
+      "test_return": 34.148,
+      "test_dd": -58.96419094188855,
+      "test_trades": 37,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.2,
+      "smooth": 1,
+      "weights": {
+        "momentum": 0.2,
+        "ema_trend": 0.4,
+        "vwap_dev": 0.15,
+        "volatility": 0.15,
+        "skew": 0.0,
+        "kurtosis": 0.0,
+        "amihud": 0.1
+      },
+      "valid_return": -77.08,
+      "valid_dd": -102.67280618185669,
+      "valid_trades": 242,
+      "test_return": 32.667999999999985,
+      "test_dd": -62.27703537999647,
+      "test_trades": 69,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.4,
+      "smooth": 3,
+      "weights": {
+        "momentum": 0.15,
+        "ema_trend": 0.25,
+        "vwap_dev": 0.2,
+        "volatility": 0.1,
+        "skew": 0.15,
+        "kurtosis": 0.1,
+        "amihud": 0.05
+      },
+      "valid_return": 24.932,
+      "valid_dd": -62.44077530509692,
+      "valid_trades": 113,
+      "test_return": 30.348,
+      "test_dd": -61.07218462088911,
+      "test_trades": 47,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.2,
+      "smooth": 3,
+      "weights": {
+        "momentum": 0.3,
+        "ema_trend": 0.3,
+        "vwap_dev": 0.2,
+        "volatility": 0.1,
+        "skew": 0.05,
+        "kurtosis": 0.0,
+        "amihud": 0.05
+      },
+      "valid_return": -15.30799999999999,
+      "valid_dd": -85.8813316993464,
+      "valid_trades": 169,
+      "test_return": 28.987999999999992,
+      "test_dd": -58.95524613136946,
+      "test_trades": 71,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.5,
+      "smooth": 5,
+      "weights": {
+        "momentum": 0.15,
+        "ema_trend": 0.25,
+        "vwap_dev": 0.2,
+        "volatility": 0.1,
+        "skew": 0.15,
+        "kurtosis": 0.1,
+        "amihud": 0.05
+      },
+      "valid_return": 30.932000000000002,
+      "valid_dd": -60.93337004405287,
+      "valid_trades": 73,
+      "test_return": 28.947999999999997,
+      "test_dd": -57.22293449417097,
+      "test_trades": 37,
+      "beats_test": false
+    },
+    {
+      "threshold": 0.2,
+      "smooth": 5,
+      "weights": {
+        "momentum": 0.3,
+        "ema_trend": 0.3,
+        "vwap_dev": 0.2,
+        "volatility": 0.1,
+        "skew": 0.05,
+        "kurtosis": 0.0,
+        "amihud": 0.05
+      },
+      "valid_return": 7.772000000000001,
+      "valid_dd": -73.7148173993952,
+      "valid_trades": 127,
+      "test_return": 27.547999999999995,
+      "test_dd": -59.79009511315185,
+      "test_trades": 57,
+      "beats_test": false
+    }
+  ],
+  "recommend_add": false,
+  "hybrid_filter": {
+    "grid": [
+      {
+        "threshold": -0.5,
+        "valid_return": 58.93200000000001,
+        "test_return": 39.307999999999986,
+        "beats_test": true
+      },
+      {
+        "threshold": -0.2,
+        "valid_return": 44.17200000000001,
+        "test_return": 37.10799999999998,
+        "beats_test": false
+      },
+      {
+        "threshold": 0.0,
+        "valid_return": 24.612000000000013,
+        "test_return": 42.54799999999999,
+        "beats_test": true
+      },
+      {
+        "threshold": 0.2,
+        "valid_return": 32.85200000000002,
+        "test_return": 40.14799999999998,
+        "beats_test": true
+      },
+      {
+        "threshold": 0.3,
+        "valid_return": 30.012000000000015,
+        "test_return": 23.54799999999999,
+        "beats_test": false
+      }
+    ],
+    "best_test": {
+      "threshold": 0.0,
+      "valid_return": 24.612000000000013,
+      "test_return": 42.54799999999999,
+      "beats_test": true
+    },
+    "best_robust": {
+      "threshold": -0.5,
+      "valid_return": 58.93200000000001,
+      "test_return": 39.307999999999986,
+      "beats_test": true
+    }
+  },
+  "recommend_hybrid": false
+}

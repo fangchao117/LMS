@@ -1,0 +1,171 @@
+{
+  "objective": "return_max",
+  "valid_period": [
+    "2022-01-01",
+    "2023-06-30"
+  ],
+  "test_period": [
+    "2023-07-01",
+    "2026-06-30"
+  ],
+  "best": {
+    "ma_short": 8,
+    "ma_medium": 21,
+    "ma_long": 34,
+    "max_lots": 1,
+    "min_trend_pct": 0.0,
+    "max_drawdown_pct": 0.0,
+    "valid_return": 52.445456156239835,
+    "valid_sharpe": 0.7556199790263987,
+    "valid_max_dd": -39.57745777733995,
+    "valid_trades": 23
+  },
+  "test_stats": {
+    "start_date": "2023-07-03",
+    "end_date": "2026-06-30",
+    "total_days": "725",
+    "profit_days": "199",
+    "loss_days": "196",
+    "capital": "10000",
+    "end_balance": 18750.35852599029,
+    "max_drawdown": -11935.10732291474,
+    "max_ddpercent": -65.12662145414298,
+    "max_drawdown_duration": "154",
+    "total_net_pnl": 8750.358525990287,
+    "daily_net_pnl": 12.069460035848671,
+    "total_commission": 212.75781867177903,
+    "daily_commission": 0.2934590602369366,
+    "total_turnover": 2127578.1867177906,
+    "daily_turnover": 2934.5906023693665,
+    "total_trade_count": "57",
+    "daily_trade_count": 0.07862068965517241,
+    "total_return": 87.50358525990289,
+    "annual_return": 28.96670408603682,
+    "daily_return": 0.19066602804236696,
+    "return_std": 4.637514184254328,
+    "sharpe_ratio": 0.6369329101377956,
+    "return_drawdown_ratio": 0.7331612769991676
+  },
+  "top10_valid": [
+    {
+      "ma_short": 8,
+      "ma_medium": 21,
+      "ma_long": 34,
+      "max_lots": 1,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": 52.445456156239835,
+      "valid_sharpe": 0.7556199790263987,
+      "valid_max_dd": -39.57745777733995,
+      "valid_trades": 23
+    },
+    {
+      "ma_short": 3,
+      "ma_medium": 21,
+      "ma_long": 34,
+      "max_lots": 1,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": 31.306228164556927,
+      "valid_sharpe": 0.617148574039041,
+      "valid_max_dd": -44.85048491082948,
+      "valid_trades": 27
+    },
+    {
+      "ma_short": 5,
+      "ma_medium": 21,
+      "ma_long": 34,
+      "max_lots": 1,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": 28.97036056655933,
+      "valid_sharpe": 0.6029211767936605,
+      "valid_max_dd": -48.86299577027895,
+      "valid_trades": 29
+    },
+    {
+      "ma_short": 8,
+      "ma_medium": 21,
+      "ma_long": 34,
+      "max_lots": 3,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": 12.707333702239175,
+      "valid_sharpe": 0.5380226508541256,
+      "valid_max_dd": -53.80435291933935,
+      "valid_trades": 31
+    },
+    {
+      "ma_short": 8,
+      "ma_medium": 21,
+      "ma_long": 34,
+      "max_lots": 2,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": 8.785336930140897,
+      "valid_sharpe": 0.5056918357823225,
+      "valid_max_dd": -55.41187190487403,
+      "valid_trades": 30
+    },
+    {
+      "ma_short": 5,
+      "ma_medium": 21,
+      "ma_long": 34,
+      "max_lots": 2,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": -39.91622731417285,
+      "valid_sharpe": -0.3118907939410956,
+      "valid_max_dd": -54.950630239859734,
+      "valid_trades": 18
+    },
+    {
+      "ma_short": 5,
+      "ma_medium": 21,
+      "ma_long": 34,
+      "max_lots": 3,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": -39.91622731417285,
+      "valid_sharpe": -0.3118907939410956,
+      "valid_max_dd": -54.950630239859734,
+      "valid_trades": 18
+    },
+    {
+      "ma_short": 3,
+      "ma_medium": 13,
+      "ma_long": 34,
+      "max_lots": 1,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": -40.02854183079753,
+      "valid_sharpe": -1.1187061566017555,
+      "valid_max_dd": -40.02854183079753,
+      "valid_trades": 4
+    },
+    {
+      "ma_short": 3,
+      "ma_medium": 13,
+      "ma_long": 34,
+      "max_lots": 2,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": -40.02854183079753,
+      "valid_sharpe": -1.1187061566017555,
+      "valid_max_dd": -40.02854183079753,
+      "valid_trades": 4
+    },
+    {
+      "ma_short": 3,
+      "ma_medium": 13,
+      "ma_long": 34,
+      "max_lots": 3,
+      "min_trend_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "valid_return": -40.02854183079753,
+      "valid_sharpe": -1.1187061566017555,
+      "valid_max_dd": -40.02854183079753,
+      "valid_trades": 4
+    }
+  ]
+}

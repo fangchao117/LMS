@@ -1,0 +1,110 @@
+[
+  {
+    "symbol": "FG509",
+    "window": [
+      "2025-06-20",
+      "2025-08-14"
+    ],
+    "bars": 574,
+    "mode": "daily_filter_donchian",
+    "donchian": 20,
+    "return_pct": 42.36,
+    "max_dd_pct": -28.85699436293128,
+    "trades": 6,
+    "sharpe": 3.0268220707507174
+  },
+  {
+    "symbol": "FG509",
+    "window": [
+      "2025-06-20",
+      "2025-08-14"
+    ],
+    "bars": 574,
+    "mode": "daily_filter_ema",
+    "return_pct": 18.720000000000002,
+    "max_dd_pct": -45.35948894111975,
+    "trades": 12,
+    "sharpe": 3.9713026517119565
+  },
+  {
+    "symbol": "FG601",
+    "window": [
+      "2025-08-15",
+      "2025-12-14"
+    ],
+    "bars": 1195,
+    "mode": "daily_filter_donchian",
+    "donchian": 20,
+    "return_pct": 0.6479999999999819,
+    "max_dd_pct": -54.15664865782254,
+    "trades": 13,
+    "sharpe": 0.9768985691205269
+  },
+  {
+    "symbol": "FG601",
+    "window": [
+      "2025-08-15",
+      "2025-12-14"
+    ],
+    "bars": 1195,
+    "mode": "daily_filter_ema",
+    "return_pct": 10.047999999999991,
+    "max_dd_pct": -55.50862864654715,
+    "trades": 23,
+    "sharpe": 0.03282432571142698
+  },
+  {
+    "symbol": "FG605",
+    "window": [
+      "2025-12-15",
+      "2026-04-14"
+    ],
+    "bars": 1140,
+    "mode": "daily_filter_donchian",
+    "donchian": 20,
+    "return_pct": -42.63600000000001,
+    "max_dd_pct": -71.776952542472,
+    "trades": 19,
+    "sharpe": 1.114423308949594
+  },
+  {
+    "symbol": "FG605",
+    "window": [
+      "2025-12-15",
+      "2026-04-14"
+    ],
+    "bars": 1140,
+    "mode": "daily_filter_ema",
+    "return_pct": -49.596000000000004,
+    "max_dd_pct": -76.72872731550927,
+    "trades": 23,
+    "sharpe": 0.8976894795335224
+  },
+  {
+    "symbol": "FG609",
+    "window": [
+      "2026-04-15",
+      "2026-07-08"
+    ],
+    "bars": 1077,
+    "mode": "daily_filter_donchian",
+    "donchian": 20,
+    "return_pct": 8.95999999999999,
+    "max_dd_pct": -50.12879958784132,
+    "trades": 16,
+    "sharpe": 0.7034082847265053
+  },
+  {
+    "symbol": "FG609",
+    "window": [
+      "2026-04-15",
+      "2026-07-08"
+    ],
+    "bars": 1077,
+    "mode": "daily_filter_ema",
+    "return_pct": -18.736000000000008,
+    "max_dd_pct": -54.96073578390931,
+    "trades": 27,
+    "sharpe": -0.042466663949057314
+  }
+]

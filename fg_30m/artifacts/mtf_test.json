@@ -1,0 +1,41 @@
+{
+  "symbol": "FG609",
+  "results": [
+    {
+      "name": "30m EMA 12/48",
+      "valid_return": 58.172000000000004,
+      "valid_trades": 87,
+      "test_return": 38.307999999999986,
+      "test_trades": 43
+    },
+    {
+      "name": "30m EMA 24/48",
+      "valid_return": 65.61200000000001,
+      "valid_trades": 51,
+      "test_return": 48.54799999999999,
+      "test_trades": 27
+    },
+    {
+      "name": "60m EMA 6/24 (trade on 30m)",
+      "valid_return": 53.532000000000004,
+      "valid_trades": 93,
+      "test_return": 26.187999999999988,
+      "test_trades": 51
+    },
+    {
+      "name": "MTF 60m 6/24 + 30m 24/48",
+      "valid_return": 61.012,
+      "valid_trades": 71,
+      "test_return": 37.26799999999999,
+      "test_trades": 39
+    },
+    {
+      "name": "MTF 60m 4/12 + 30m 5/20",
+      "valid_return": 11.292000000000012,
+      "valid_trades": 159,
+      "test_return": 50.34799999999999,
+      "test_trades": 67
+    }
+  ],
+  "recommend_mtf": false
+}

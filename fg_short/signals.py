@@ -28,11 +28,19 @@ def _rsi(close: pd.Series, period: int) -> pd.Series:
     return 100 - 100 / (1 + rs)
 
 
-def _trend_ma(pdf: pd.DataFrame, s: int, m: int, l: int) -> np.ndarray:
+def _trend_ma(
+    pdf: pd.DataFrame,
+    s: int,
+    m: int,
+    l: int,
+    min_trend_pct: float = 0.0,
+) -> np.ndarray:
     c = pdf["close"]
     ma_s, ma_m, ma_l = c.rolling(s).mean(), c.rolling(m).mean(), c.rolling(l).mean()
-    long_c = (ma_s > ma_m) & (ma_m > ma_l) & (c > ma_m)
-    short_c = (ma_s < ma_m) & (ma_m < ma_l) & (c < ma_m)
+    spread = (ma_s - ma_l).abs() / (c + 1e-12)
+    trend_ok = spread >= min_trend_pct if min_trend_pct > 0 else True
+    long_c = (ma_s > ma_m) & (ma_m > ma_l) & (c > ma_m) & trend_ok
+    short_c = (ma_s < ma_m) & (ma_m < ma_l) & (c < ma_m) & trend_ok
     return np.where(long_c, 1.0, np.where(short_c, -1.0, 0.0))
 
 
@@ -46,12 +54,13 @@ def generate_signals(
     ma_medium: int = config.MA_MEDIUM,
     ma_long: int = config.MA_LONG,
     rsi_period: int = config.RSI_PERIOD,
+    min_trend_pct: float = config.MIN_TREND_PCT,
 ) -> pl.DataFrame:
     pdf = df.sort("datetime").to_pandas()
     c, h, l, v = pdf["close"], pdf["high"], pdf["low"], pdf["volume"]
 
     if mode == "trend_ma":
-        signal = _trend_ma(pdf, ma_short, ma_medium, ma_long)
+        signal = _trend_ma(pdf, ma_short, ma_medium, ma_long, min_trend_pct)
         out_cols = {
             "datetime": pdf["datetime"],
             "vt_symbol": pdf["vt_symbol"],

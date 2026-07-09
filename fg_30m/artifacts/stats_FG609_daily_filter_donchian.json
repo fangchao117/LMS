@@ -1,0 +1,10 @@
+{
+  "capital": 10000.0,
+  "end_equity": 15800.0,
+  "total_return_pct": 58.00000000000001,
+  "max_ddpercent": -57.21434528773979,
+  "sharpe_ratio": 0.9561003491904815,
+  "total_trades": 40,
+  "bars": 3117,
+  "max_lots": 3
+}

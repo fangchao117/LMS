@@ -26,17 +26,23 @@ COMMISSION_REF_PRICE: float = 1000.0         # 折算参考价（元/吨）
 LONG_RATE: float = COMMISSION_YUAN_PER_LOT / (COMMISSION_REF_PRICE * CONTRACT_SIZE)
 SHORT_RATE: float = LONG_RATE
 
-# 小资金
-CAPITAL: int = 10000
+# 小资金 → 5万规模（按权益动态算手数，封顶 max_lots）
+CAPITAL: int = 10_000
+CAPITAL_MAX: int = 50_000          # 算手数时权益上限（1万起步、最多按5万规模）
 MARGIN_RATE: float = 0.14          # 郑商所玻璃保证金比例 14%
 POSITION_PCT: float = 0.95         # 可用资金用于保证金的比例
-MAX_LOTS: int = 1                  # 小资金默认 1 手封顶（防爆仓）
+MAX_LOTS: int = 5                  # 净持仓上限（手）；1万约1~3手，5万可顶格5手
+MAX_TOTAL_LOTS: int = 10           # 锁仓模式下 多+空 合计上限（如各1手=2）
 PRICE_ADD_TICKS: int = 1
 
-# 样本划分
-TRAIN_PERIOD: tuple[str, str] = ("2014-01-01", "2021-12-31")
-VALID_PERIOD: tuple[str, str] = ("2022-01-01", "2023-06-30")
-TEST_PERIOD: tuple[str, str] = ("2023-07-01", "2026-06-30")
+# 主力月份（1/5/9），换月见 vnpy_sim/dominant_contract.py
+DOMINANT_MONTHS: tuple[int, ...] = (1, 5, 9)
+
+# 样本划分（统一样本）
+BACKTEST_PERIOD: tuple[str, str] = ("2024-12-20", "2025-04-20")
+TRAIN_PERIOD: tuple[str, str] = BACKTEST_PERIOD
+VALID_PERIOD: tuple[str, str] = BACKTEST_PERIOD
+TEST_PERIOD: tuple[str, str] = BACKTEST_PERIOD
 
 # 短线信号（VALID+TEST 双段调优默认：三均线趋势 1 手）
 SIGNAL_MODE: str = "trend_ma"      # "trend_ma" | "breakout" | "ema_cross" | "rsi_momo"
@@ -51,6 +57,11 @@ RSI_OB: float = 70.0             # 超买
 RSI_OS: float = 30.0             # 超卖
 SIGNAL_THRESHOLD: float = 0.0    # 复合得分死区（0=纯翻转）
 MIN_HOLD_DAYS: int = 1           # 最短持有（策略层由信号自然换仓）
+
+# 风控（收益最大化默认关闭；需要控回撤时在 VeighNa / tune_valid 里开）
+MIN_TREND_PCT: float = 0.0       # 0=不过滤，追求收益
+STOP_LOSS_PCT: float = 0.0
+MAX_DRAWDOWN_PCT: float = 0.0    # 0=关闭账户熔断
 
 SIGNAL_COL: str = "signal"
 

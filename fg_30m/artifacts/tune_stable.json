@@ -1,0 +1,482 @@
+{
+  "best": {
+    "label": "daily_stable_adx_35",
+    "mode": "daily_filter_ema_stable",
+    "params": {
+      "adx_threshold": 35.0,
+      "ema_fast": 26,
+      "ema_slow": 46,
+      "trend_ma": 50
+    },
+    "seg_min": -22.160000000000004,
+    "seg_avg": -1.780000000000004,
+    "seg_wins": 2,
+    "seg_n": 4,
+    "seg_detail": [
+      {
+        "symbol": "FG509",
+        "return_pct": 4.719999999999991,
+        "max_dd_pct": -41.255665754162365,
+        "trades": 2
+      },
+      {
+        "symbol": "FG601",
+        "return_pct": 10.319999999999997,
+        "max_dd_pct": -32.532000000000004,
+        "trades": 2
+      },
+      {
+        "symbol": "FG605",
+        "return_pct": -22.160000000000004,
+        "max_dd_pct": -41.83926596730327,
+        "trades": 4
+      },
+      {
+        "symbol": "FG609",
+        "return_pct": 0.0,
+        "max_dd_pct": 0.0,
+        "trades": 0
+      }
+    ],
+    "full_ret": 11.195283718219029,
+    "full_dd": -57.572277485550735,
+    "test_ret": 1.738498472556449,
+    "score": -49.48227059334254
+  },
+  "top10": [
+    {
+      "label": "daily_stable_adx_35",
+      "mode": "daily_filter_ema_stable",
+      "params": {
+        "adx_threshold": 35.0,
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "trend_ma": 50
+      },
+      "seg_min": -22.160000000000004,
+      "seg_avg": -1.780000000000004,
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.719999999999991,
+          "max_dd_pct": -41.255665754162365,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.319999999999997,
+          "max_dd_pct": -32.532000000000004,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "full_ret": 11.195283718219029,
+      "full_dd": -57.572277485550735,
+      "test_ret": 1.738498472556449,
+      "score": -49.48227059334254
+    },
+    {
+      "label": "daily_stable_adx_20",
+      "mode": "daily_filter_ema_stable",
+      "params": {
+        "adx_threshold": 20.0,
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "trend_ma": 50
+      },
+      "seg_min": -22.160000000000004,
+      "seg_avg": -1.780000000000004,
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.719999999999991,
+          "max_dd_pct": -41.255665754162365,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.319999999999997,
+          "max_dd_pct": -32.532000000000004,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "full_ret": 10.93930312523177,
+      "full_dd": -57.572277485550735,
+      "test_ret": 1.4825178795691896,
+      "score": -49.687055067732345
+    },
+    {
+      "label": "daily_stable_adx_25",
+      "mode": "daily_filter_ema_stable",
+      "params": {
+        "adx_threshold": 25.0,
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "trend_ma": 50
+      },
+      "seg_min": -22.160000000000004,
+      "seg_avg": -1.780000000000004,
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.719999999999991,
+          "max_dd_pct": -41.255665754162365,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.319999999999997,
+          "max_dd_pct": -32.532000000000004,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "full_ret": 10.93930312523177,
+      "full_dd": -57.572277485550735,
+      "test_ret": 1.4825178795691896,
+      "score": -49.687055067732345
+    },
+    {
+      "label": "daily_stable_adx_30",
+      "mode": "daily_filter_ema_stable",
+      "params": {
+        "adx_threshold": 30.0,
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "trend_ma": 50
+      },
+      "seg_min": -22.160000000000004,
+      "seg_avg": -1.780000000000004,
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.719999999999991,
+          "max_dd_pct": -41.255665754162365,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.319999999999997,
+          "max_dd_pct": -32.532000000000004,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "full_ret": 10.93930312523177,
+      "full_dd": -57.572277485550735,
+      "test_ret": 1.4825178795691896,
+      "score": -49.687055067732345
+    },
+    {
+      "label": "ema_stable_26_46",
+      "mode": "ema_stable",
+      "params": {
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "adx_threshold": 30.0
+      },
+      "seg_min": -22.160000000000004,
+      "seg_avg": -0.40000000000000036,
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": 11.040000000000006,
+          "max_dd_pct": -59.00911008392048,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 9.519999999999996,
+          "max_dd_pct": -33.33200000000001,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "full_ret": 1.7468521318453556,
+      "full_dd": -59.00911008392048,
+      "test_ret": 1.4825178795691896,
+      "score": -50.046263217324785
+    },
+    {
+      "label": "daily_adx_20_ema_34_55",
+      "mode": "daily_adx_filter_ema",
+      "params": {
+        "adx_threshold": 20.0,
+        "ema_fast": 34,
+        "ema_slow": 55
+      },
+      "seg_min": -28.056000000000004,
+      "seg_avg": -15.891000000000004,
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": -16.359999999999996,
+          "max_dd_pct": -40.163113464014884,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 5.127999999999999,
+          "max_dd_pct": -54.549941052285256,
+          "trades": 11
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -24.27600000000001,
+          "max_dd_pct": -52.75506141076296,
+          "trades": 5
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -28.056000000000004,
+          "max_dd_pct": -30.575853852263705,
+          "trades": 5
+        }
+      ],
+      "full_ret": 16.80686876641222,
+      "full_dd": -67.0244971421256,
+      "test_ret": -14.23638388479409,
+      "score": -97.31323139336668
+    },
+    {
+      "label": "daily_adx_30_ema_34_55",
+      "mode": "daily_adx_filter_ema",
+      "params": {
+        "adx_threshold": 30.0,
+        "ema_fast": 34,
+        "ema_slow": 55
+      },
+      "seg_min": -30.456000000000007,
+      "seg_avg": -15.313000000000002,
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": -12.680000000000003,
+          "max_dd_pct": -37.53040492202032,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 5.000000000000004,
+          "max_dd_pct": -39.968,
+          "trades": 10
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -23.116000000000003,
+          "max_dd_pct": -28.13200000000001,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -30.456000000000007,
+          "max_dd_pct": -32.476000000000006,
+          "trades": 5
+        }
+      ],
+      "full_ret": -24.19555194161549,
+      "full_dd": -66.62019639885229,
+      "test_ret": -13.681613714059548,
+      "score": -103.96834007096074
+    },
+    {
+      "label": "daily_adx_35_ema_34_55",
+      "mode": "daily_adx_filter_ema",
+      "params": {
+        "adx_threshold": 35.0,
+        "ema_fast": 34,
+        "ema_slow": 55
+      },
+      "seg_min": -30.776000000000003,
+      "seg_avg": -16.493000000000002,
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": -12.680000000000003,
+          "max_dd_pct": -37.53040492202032,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 6.2000000000000055,
+          "max_dd_pct": -39.368,
+          "trades": 10
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -28.716000000000008,
+          "max_dd_pct": -31.652000000000008,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -30.776000000000003,
+          "max_dd_pct": -32.79600000000001,
+          "trades": 3
+        }
+      ],
+      "full_ret": -31.17990499927106,
+      "full_dd": -66.2460181789428,
+      "test_ret": -13.542921171375887,
+      "score": -104.72384148183642
+    },
+    {
+      "label": "daily_adx_30_ema_12_48",
+      "mode": "daily_adx_filter_ema",
+      "params": {
+        "adx_threshold": 30.0,
+        "ema_fast": 12,
+        "ema_slow": 48
+      },
+      "seg_min": -32.496,
+      "seg_avg": -12.213000000000001,
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": -2.080000000000004,
+          "max_dd_pct": -29.947059665188153,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 8.840000000000003,
+          "max_dd_pct": -38.96,
+          "trades": 14
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -23.116000000000003,
+          "max_dd_pct": -28.13200000000001,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -32.496,
+          "max_dd_pct": -35.95313741064338,
+          "trades": 11
+        }
+      ],
+      "full_ret": 4.8540957591103995,
+      "full_dd": -51.688885165410326,
+      "test_ret": -15.377594307046804,
+      "score": -107.71229673699003
+    },
+    {
+      "label": "daily_adx_20_ema_26_46",
+      "mode": "daily_adx_filter_ema",
+      "params": {
+        "adx_threshold": 20.0,
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "seg_min": -31.096,
+      "seg_avg": -13.321000000000005,
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_detail": [
+        {
+          "symbol": "FG509",
+          "return_pct": -17.159999999999997,
+          "max_dd_pct": -40.73544140792674,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 15.527999999999986,
+          "max_dd_pct": -53.460119063653266,
+          "trades": 11
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -20.556000000000008,
+          "max_dd_pct": -54.23089685963378,
+          "trades": 7
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -31.096,
+          "max_dd_pct": -33.91149743184513,
+          "trades": 11
+        }
+      ],
+      "full_ret": 26.226805023665655,
+      "full_dd": -70.68998463751309,
+      "test_ret": -15.025730156135907,
+      "score": -107.98108028428699
+    }
+  ]
+}

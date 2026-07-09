@@ -1,0 +1,2803 @@
+{
+  "period": [
+    "2025-06-20",
+    "2026-07-08"
+  ],
+  "n_strategies": 31,
+  "top_return": [
+    {
+      "name": "日线EMA+30mDon20",
+      "spec": {
+        "name": "日线EMA+30mDon20",
+        "mode": "daily_filter_donchian",
+        "donchian": 20
+      },
+      "full_ret": 71.21310804598878,
+      "full_dd": -47.72928603442,
+      "full_trades": 56,
+      "test_ret": 3.9791212469595827,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 42.36,
+          "max_dd_pct": -28.85699436293128,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 0.6479999999999819,
+          "max_dd_pct": -54.15664865782254,
+          "trades": 13
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -42.63600000000001,
+          "max_dd_pct": -71.776952542472,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 8.95999999999999,
+          "max_dd_pct": -50.12879958784132,
+          "trades": 16
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -42.63600000000001,
+      "seg_avg": 2.3329999999999904,
+      "score_return": 71.21310804598878,
+      "score_balanced": 35.46267456262442,
+      "score_stable": -90.46429658340423
+    },
+    {
+      "name": "日线EMA+30mDon40",
+      "spec": {
+        "name": "日线EMA+30mDon40",
+        "mode": "daily_filter_donchian",
+        "donchian": 40
+      },
+      "full_ret": 68.30520754108966,
+      "full_dd": -59.56017690100397,
+      "full_trades": 42,
+      "test_ret": 2.3344845030116357,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 21.76,
+          "max_dd_pct": -37.65616679637898,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 3.1279999999999974,
+          "max_dd_pct": -56.13667864113372,
+          "trades": 11
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.516000000000002,
+          "max_dd_pct": -61.044336543819156,
+          "trades": 11
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 10.840000000000005,
+          "max_dd_pct": -50.61647311699555,
+          "trades": 14
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -22.516000000000002,
+      "seg_avg": 3.303000000000001,
+      "score_return": 68.30520754108966,
+      "score_balanced": 37.22595338188759,
+      "score_stable": -33.29279312869498
+    },
+    {
+      "name": "日线EMA+30mEMA26/46",
+      "spec": {
+        "name": "日线EMA+30mEMA26/46",
+        "mode": "daily_filter_ema",
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "full_ret": 59.76789434746455,
+      "full_dd": -65.08204459315284,
+      "full_trades": 69,
+      "test_ret": -3.087493099684868,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 18.720000000000002,
+          "max_dd_pct": -45.35948894111975,
+          "trades": 12
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.047999999999991,
+          "max_dd_pct": -55.50862864654715,
+          "trades": 23
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -49.596000000000004,
+          "max_dd_pct": -76.72872731550927,
+          "trades": 23
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.736000000000008,
+          "max_dd_pct": -54.96073578390931,
+          "trades": 27
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -49.596000000000004,
+      "seg_avg": -9.891000000000005,
+      "score_return": 59.76789434746455,
+      "score_balanced": 17.12835243007592,
+      "score_stable": -133.348155468473
+    },
+    {
+      "name": "30mEMA+Don同向",
+      "spec": {
+        "name": "30mEMA+Don同向",
+        "mode": "ema_donchian_both",
+        "donchian": 20
+      },
+      "full_ret": 57.60276337631638,
+      "full_dd": -64.91815006522745,
+      "full_trades": 57,
+      "test_ret": 12.755202374845442,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -0.16000000000000458,
+          "max_dd_pct": -64.91815006522745,
+          "trades": 7
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -25.072000000000006,
+          "max_dd_pct": -78.45393763682623,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -12.436000000000003,
+          "max_dd_pct": -63.695914982147386,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 11.495999999999995,
+          "max_dd_pct": -65.92307692307693,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -25.072000000000006,
+      "seg_avg": -6.543000000000005,
+      "score_return": 57.60276337631638,
+      "score_balanced": 17.586423315711524,
+      "score_stable": -66.8220288256228
+    },
+    {
+      "name": "Donchian40持仓",
+      "spec": {
+        "name": "Donchian40持仓",
+        "mode": "breakout",
+        "donchian": 40,
+        "ffill": true
+      },
+      "full_ret": 52.74399496726991,
+      "full_dd": -71.31003559376877,
+      "full_trades": 75,
+      "test_ret": 8.092267442717539,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 36.08,
+          "max_dd_pct": -71.31003559376877,
+          "trades": 15
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 23.727999999999994,
+          "max_dd_pct": -63.336255547641215,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -9.236,
+          "max_dd_pct": -63.898906874668015,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 28.576,
+          "max_dd_pct": -58.24155765135382,
+          "trades": 17
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -9.236,
+      "seg_avg": 19.787,
+      "score_return": 52.74399496726991,
+      "score_balanced": 33.71054613638616,
+      "score_stable": 7.07612660260501
+    },
+    {
+      "name": "RSI动量10",
+      "spec": {
+        "name": "RSI动量10",
+        "mode": "rsi_momo",
+        "rsi_period": 10,
+        "ffill": true
+      },
+      "full_ret": 48.75041905404422,
+      "full_dd": -68.28096366155634,
+      "full_trades": 151,
+      "test_ret": -6.634718953085672,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 32.31999999999999,
+          "max_dd_pct": -68.28096366155634,
+          "trades": 29
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 44.48799999999999,
+          "max_dd_pct": -57.410969283674305,
+          "trades": 47
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -24.67600000000001,
+          "max_dd_pct": -66.4869721473495,
+          "trades": 35
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -9.976000000000006,
+          "max_dd_pct": -50.59723889555823,
+          "trades": 43
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -24.67600000000001,
+      "seg_avg": 10.538999999999993,
+      "score_return": 48.75041905404422,
+      "score_balanced": 17.7620792817671,
+      "score_stable": -61.00155220885412
+    },
+    {
+      "name": "EMA26/46",
+      "spec": {
+        "name": "EMA26/46",
+        "mode": "ema_cross",
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "full_ret": 43.75126903459123,
+      "full_dd": -67.51794467787114,
+      "full_trades": 131,
+      "test_ret": -12.653835539358427,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -14.439999999999998,
+          "max_dd_pct": -67.51794467787114,
+          "trades": 19
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 4.3279999999999985,
+          "max_dd_pct": -75.88145530479481,
+          "trades": 41
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.076000000000008,
+          "max_dd_pct": -70.72327894467983,
+          "trades": 35
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -34.17600000000001,
+          "max_dd_pct": -60.80372563533185,
+          "trades": 53
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -34.17600000000001,
+      "seg_avg": -16.591000000000005,
+      "score_return": 43.75126903459123,
+      "score_balanced": 4.298048804284134,
+      "score_stable": -107.35850670525346
+    },
+    {
+      "name": "日线EMA+30mEMA12/48",
+      "spec": {
+        "name": "日线EMA+30mEMA12/48",
+        "mode": "daily_filter_ema",
+        "ema_fast": 12,
+        "ema_slow": 48
+      },
+      "full_ret": 34.353807225290446,
+      "full_dd": -51.652459258186134,
+      "full_trades": 111,
+      "test_ret": -6.735434878646707,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 34.31999999999999,
+          "max_dd_pct": -44.90749111070934,
+          "trades": 12
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 0.08799999999999919,
+          "max_dd_pct": -59.69637040483947,
+          "trades": 27
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -74.47600000000001,
+          "max_dd_pct": -95.81800523852968,
+          "trades": 45
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.096,
+          "max_dd_pct": -54.726693843544496,
+          "trades": 41
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -74.47600000000001,
+      "seg_avg": -14.541000000000006,
+      "score_return": 34.353807225290446,
+      "score_balanced": 2.0275670256589144,
+      "score_stable": -207.12620929096062
+    },
+    {
+      "name": "30mEMA+Don突破",
+      "spec": {
+        "name": "30mEMA+Don突破",
+        "mode": "ema_donchian_breakout",
+        "donchian": 20
+      },
+      "full_ret": 29.349049064170686,
+      "full_dd": -56.01967755531454,
+      "full_trades": 94,
+      "test_ret": -2.975163748456866,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 29.200000000000003,
+          "max_dd_pct": -55.09974194076926,
+          "trades": 10
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -10.71200000000001,
+          "max_dd_pct": -61.98465682829701,
+          "trades": 27
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -34.716,
+          "max_dd_pct": -71.25025698258392,
+          "trades": 31
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -4.84,
+          "max_dd_pct": -57.06723456038942,
+          "trades": 26
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -34.716,
+      "seg_avg": -5.267000000000002,
+      "score_return": 29.349049064170686,
+      "score_balanced": 2.062635242679722,
+      "score_stable": -101.83951738529134
+    },
+    {
+      "name": "日线Don+30mEMA",
+      "spec": {
+        "name": "日线Don+30mEMA",
+        "mode": "daily_donchian_filter_ema",
+        "donchian": 20
+      },
+      "full_ret": 26.15629011811762,
+      "full_dd": -69.52989749231219,
+      "full_trades": 63,
+      "test_ret": -10.642098889377571,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 3.4399999999999986,
+          "max_dd_pct": -42.681088749002576,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 16.28799999999999,
+          "max_dd_pct": -32.128,
+          "trades": 7
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -13.716000000000006,
+          "max_dd_pct": -27.74,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.816,
+          "max_dd_pct": -37.684,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -18.816,
+      "seg_avg": -3.201000000000004,
+      "score_return": 26.15629011811762,
+      "score_balanced": 9.200611645524708,
+      "score_stable": -45.67502894315122
+    }
+  ],
+  "top_stable": [
+    {
+      "name": "Donchian40持仓",
+      "spec": {
+        "name": "Donchian40持仓",
+        "mode": "breakout",
+        "donchian": 40,
+        "ffill": true
+      },
+      "full_ret": 52.74399496726991,
+      "full_dd": -71.31003559376877,
+      "full_trades": 75,
+      "test_ret": 8.092267442717539,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 36.08,
+          "max_dd_pct": -71.31003559376877,
+          "trades": 15
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 23.727999999999994,
+          "max_dd_pct": -63.336255547641215,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -9.236,
+          "max_dd_pct": -63.898906874668015,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 28.576,
+          "max_dd_pct": -58.24155765135382,
+          "trades": 17
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -9.236,
+      "seg_avg": 19.787,
+      "score_return": 52.74399496726991,
+      "score_balanced": 33.71054613638616,
+      "score_stable": 7.07612660260501
+    },
+    {
+      "name": "日线EMA+30mDon40",
+      "spec": {
+        "name": "日线EMA+30mDon40",
+        "mode": "daily_filter_donchian",
+        "donchian": 40
+      },
+      "full_ret": 68.30520754108966,
+      "full_dd": -59.56017690100397,
+      "full_trades": 42,
+      "test_ret": 2.3344845030116357,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 21.76,
+          "max_dd_pct": -37.65616679637898,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 3.1279999999999974,
+          "max_dd_pct": -56.13667864113372,
+          "trades": 11
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.516000000000002,
+          "max_dd_pct": -61.044336543819156,
+          "trades": 11
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 10.840000000000005,
+          "max_dd_pct": -50.61647311699555,
+          "trades": 14
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -22.516000000000002,
+      "seg_avg": 3.303000000000001,
+      "score_return": 68.30520754108966,
+      "score_balanced": 37.22595338188759,
+      "score_stable": -33.29279312869498
+    },
+    {
+      "name": "日线Don+30mEMA",
+      "spec": {
+        "name": "日线Don+30mEMA",
+        "mode": "daily_donchian_filter_ema",
+        "donchian": 20
+      },
+      "full_ret": 26.15629011811762,
+      "full_dd": -69.52989749231219,
+      "full_trades": 63,
+      "test_ret": -10.642098889377571,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 3.4399999999999986,
+          "max_dd_pct": -42.681088749002576,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 16.28799999999999,
+          "max_dd_pct": -32.128,
+          "trades": 7
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -13.716000000000006,
+          "max_dd_pct": -27.74,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.816,
+          "max_dd_pct": -37.684,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -18.816,
+      "seg_avg": -3.201000000000004,
+      "score_return": 26.15629011811762,
+      "score_balanced": 9.200611645524708,
+      "score_stable": -45.67502894315122
+    },
+    {
+      "name": "日线EMA+30m稳定ADX35",
+      "spec": {
+        "name": "日线EMA+30m稳定ADX35",
+        "mode": "daily_filter_ema_stable",
+        "adx_threshold": 35.0
+      },
+      "full_ret": 11.195283718219029,
+      "full_dd": -57.572277485550735,
+      "full_trades": 8,
+      "test_ret": 1.738498472556449,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.719999999999991,
+          "max_dd_pct": -41.255665754162365,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.319999999999997,
+          "max_dd_pct": -32.532000000000004,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -1.780000000000004,
+      "score_return": 11.195283718219029,
+      "score_balanced": 6.649971558966291,
+      "score_stable": -47.125206260831945
+    },
+    {
+      "name": "EMA稳定ADX35",
+      "spec": {
+        "name": "EMA稳定ADX35",
+        "mode": "ema_stable",
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "adx_threshold": 35.0
+      },
+      "full_ret": 2.002832724832615,
+      "full_dd": -59.00911008392048,
+      "full_trades": 14,
+      "test_ret": 1.738498472556449,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 11.040000000000006,
+          "max_dd_pct": -59.00911008392048,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 9.519999999999996,
+          "max_dd_pct": -33.33200000000001,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -0.40000000000000036,
+      "score_return": 2.002832724832615,
+      "score_balanced": 2.757466271856263,
+      "score_stable": -47.4125727805059
+    },
+    {
+      "name": "EMA稳定ADX25",
+      "spec": {
+        "name": "EMA稳定ADX25",
+        "mode": "ema_stable",
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "adx_threshold": 25.0
+      },
+      "full_ret": 1.7468521318453556,
+      "full_dd": -59.00911008392048,
+      "full_trades": 14,
+      "test_ret": 1.4825178795691896,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 11.040000000000006,
+          "max_dd_pct": -59.00911008392048,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 9.519999999999996,
+          "max_dd_pct": -33.33200000000001,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -0.40000000000000036,
+      "score_return": 1.7468521318453556,
+      "score_balanced": 2.603877916063908,
+      "score_stable": -47.54056307699952
+    },
+    {
+      "name": "稳定MA20/50+ADX",
+      "spec": {
+        "name": "稳定MA20/50+ADX",
+        "mode": "stable_ma",
+        "filters": "adx_div",
+        "risk": false
+      },
+      "full_ret": -9.857044861293273,
+      "full_dd": -63.482556197203266,
+      "full_trades": 42,
+      "test_ret": 0.0,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 17.440000000000012,
+          "max_dd_pct": -63.482556197203266,
+          "trades": 14
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -7.879999999999998,
+          "max_dd_pct": -59.90459904599046,
+          "trades": 12
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -19.799999999999997,
+          "max_dd_pct": -40.39656351258956,
+          "trades": 10
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -19.799999999999997,
+      "seg_avg": -2.559999999999996,
+      "score_return": -9.857044861293273,
+      "score_balanced": -10.415201374097798,
+      "score_stable": -57.096511239440645
+    },
+    {
+      "name": "RSI动量10",
+      "spec": {
+        "name": "RSI动量10",
+        "mode": "rsi_momo",
+        "rsi_period": 10,
+        "ffill": true
+      },
+      "full_ret": 48.75041905404422,
+      "full_dd": -68.28096366155634,
+      "full_trades": 151,
+      "test_ret": -6.634718953085672,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 32.31999999999999,
+          "max_dd_pct": -68.28096366155634,
+          "trades": 29
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 44.48799999999999,
+          "max_dd_pct": -57.410969283674305,
+          "trades": 47
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -24.67600000000001,
+          "max_dd_pct": -66.4869721473495,
+          "trades": 35
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -9.976000000000006,
+          "max_dd_pct": -50.59723889555823,
+          "trades": 43
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -24.67600000000001,
+      "seg_avg": 10.538999999999993,
+      "score_return": 48.75041905404422,
+      "score_balanced": 17.7620792817671,
+      "score_stable": -61.00155220885412
+    },
+    {
+      "name": "30mEMA+Don同向",
+      "spec": {
+        "name": "30mEMA+Don同向",
+        "mode": "ema_donchian_both",
+        "donchian": 20
+      },
+      "full_ret": 57.60276337631638,
+      "full_dd": -64.91815006522745,
+      "full_trades": 57,
+      "test_ret": 12.755202374845442,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -0.16000000000000458,
+          "max_dd_pct": -64.91815006522745,
+          "trades": 7
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -25.072000000000006,
+          "max_dd_pct": -78.45393763682623,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -12.436000000000003,
+          "max_dd_pct": -63.695914982147386,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 11.495999999999995,
+          "max_dd_pct": -65.92307692307693,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -25.072000000000006,
+      "seg_avg": -6.543000000000005,
+      "score_return": 57.60276337631638,
+      "score_balanced": 17.586423315711524,
+      "score_stable": -66.8220288256228
+    },
+    {
+      "name": "日线EMA+30mDon20",
+      "spec": {
+        "name": "日线EMA+30mDon20",
+        "mode": "daily_filter_donchian",
+        "donchian": 20
+      },
+      "full_ret": 71.21310804598878,
+      "full_dd": -47.72928603442,
+      "full_trades": 56,
+      "test_ret": 3.9791212469595827,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 42.36,
+          "max_dd_pct": -28.85699436293128,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 0.6479999999999819,
+          "max_dd_pct": -54.15664865782254,
+          "trades": 13
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -42.63600000000001,
+          "max_dd_pct": -71.776952542472,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 8.95999999999999,
+          "max_dd_pct": -50.12879958784132,
+          "trades": 16
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -42.63600000000001,
+      "seg_avg": 2.3329999999999904,
+      "score_return": 71.21310804598878,
+      "score_balanced": 35.46267456262442,
+      "score_stable": -90.46429658340423
+    }
+  ],
+  "top_balanced": [
+    {
+      "name": "日线EMA+30mDon40",
+      "spec": {
+        "name": "日线EMA+30mDon40",
+        "mode": "daily_filter_donchian",
+        "donchian": 40
+      },
+      "full_ret": 68.30520754108966,
+      "full_dd": -59.56017690100397,
+      "full_trades": 42,
+      "test_ret": 2.3344845030116357,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 21.76,
+          "max_dd_pct": -37.65616679637898,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 3.1279999999999974,
+          "max_dd_pct": -56.13667864113372,
+          "trades": 11
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.516000000000002,
+          "max_dd_pct": -61.044336543819156,
+          "trades": 11
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 10.840000000000005,
+          "max_dd_pct": -50.61647311699555,
+          "trades": 14
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -22.516000000000002,
+      "seg_avg": 3.303000000000001,
+      "score_return": 68.30520754108966,
+      "score_balanced": 37.22595338188759,
+      "score_stable": -33.29279312869498
+    },
+    {
+      "name": "日线EMA+30mDon20",
+      "spec": {
+        "name": "日线EMA+30mDon20",
+        "mode": "daily_filter_donchian",
+        "donchian": 20
+      },
+      "full_ret": 71.21310804598878,
+      "full_dd": -47.72928603442,
+      "full_trades": 56,
+      "test_ret": 3.9791212469595827,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 42.36,
+          "max_dd_pct": -28.85699436293128,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 0.6479999999999819,
+          "max_dd_pct": -54.15664865782254,
+          "trades": 13
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -42.63600000000001,
+          "max_dd_pct": -71.776952542472,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 8.95999999999999,
+          "max_dd_pct": -50.12879958784132,
+          "trades": 16
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -42.63600000000001,
+      "seg_avg": 2.3329999999999904,
+      "score_return": 71.21310804598878,
+      "score_balanced": 35.46267456262442,
+      "score_stable": -90.46429658340423
+    },
+    {
+      "name": "Donchian40持仓",
+      "spec": {
+        "name": "Donchian40持仓",
+        "mode": "breakout",
+        "donchian": 40,
+        "ffill": true
+      },
+      "full_ret": 52.74399496726991,
+      "full_dd": -71.31003559376877,
+      "full_trades": 75,
+      "test_ret": 8.092267442717539,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 36.08,
+          "max_dd_pct": -71.31003559376877,
+          "trades": 15
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 23.727999999999994,
+          "max_dd_pct": -63.336255547641215,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -9.236,
+          "max_dd_pct": -63.898906874668015,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 28.576,
+          "max_dd_pct": -58.24155765135382,
+          "trades": 17
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -9.236,
+      "seg_avg": 19.787,
+      "score_return": 52.74399496726991,
+      "score_balanced": 33.71054613638616,
+      "score_stable": 7.07612660260501
+    },
+    {
+      "name": "RSI动量10",
+      "spec": {
+        "name": "RSI动量10",
+        "mode": "rsi_momo",
+        "rsi_period": 10,
+        "ffill": true
+      },
+      "full_ret": 48.75041905404422,
+      "full_dd": -68.28096366155634,
+      "full_trades": 151,
+      "test_ret": -6.634718953085672,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 32.31999999999999,
+          "max_dd_pct": -68.28096366155634,
+          "trades": 29
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 44.48799999999999,
+          "max_dd_pct": -57.410969283674305,
+          "trades": 47
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -24.67600000000001,
+          "max_dd_pct": -66.4869721473495,
+          "trades": 35
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -9.976000000000006,
+          "max_dd_pct": -50.59723889555823,
+          "trades": 43
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -24.67600000000001,
+      "seg_avg": 10.538999999999993,
+      "score_return": 48.75041905404422,
+      "score_balanced": 17.7620792817671,
+      "score_stable": -61.00155220885412
+    },
+    {
+      "name": "30mEMA+Don同向",
+      "spec": {
+        "name": "30mEMA+Don同向",
+        "mode": "ema_donchian_both",
+        "donchian": 20
+      },
+      "full_ret": 57.60276337631638,
+      "full_dd": -64.91815006522745,
+      "full_trades": 57,
+      "test_ret": 12.755202374845442,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -0.16000000000000458,
+          "max_dd_pct": -64.91815006522745,
+          "trades": 7
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -25.072000000000006,
+          "max_dd_pct": -78.45393763682623,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -12.436000000000003,
+          "max_dd_pct": -63.695914982147386,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 11.495999999999995,
+          "max_dd_pct": -65.92307692307693,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -25.072000000000006,
+      "seg_avg": -6.543000000000005,
+      "score_return": 57.60276337631638,
+      "score_balanced": 17.586423315711524,
+      "score_stable": -66.8220288256228
+    },
+    {
+      "name": "日线EMA+30mEMA26/46",
+      "spec": {
+        "name": "日线EMA+30mEMA26/46",
+        "mode": "daily_filter_ema",
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "full_ret": 59.76789434746455,
+      "full_dd": -65.08204459315284,
+      "full_trades": 69,
+      "test_ret": -3.087493099684868,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 18.720000000000002,
+          "max_dd_pct": -45.35948894111975,
+          "trades": 12
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.047999999999991,
+          "max_dd_pct": -55.50862864654715,
+          "trades": 23
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -49.596000000000004,
+          "max_dd_pct": -76.72872731550927,
+          "trades": 23
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.736000000000008,
+          "max_dd_pct": -54.96073578390931,
+          "trades": 27
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -49.596000000000004,
+      "seg_avg": -9.891000000000005,
+      "score_return": 59.76789434746455,
+      "score_balanced": 17.12835243007592,
+      "score_stable": -133.348155468473
+    },
+    {
+      "name": "日线Don+30mEMA",
+      "spec": {
+        "name": "日线Don+30mEMA",
+        "mode": "daily_donchian_filter_ema",
+        "donchian": 20
+      },
+      "full_ret": 26.15629011811762,
+      "full_dd": -69.52989749231219,
+      "full_trades": 63,
+      "test_ret": -10.642098889377571,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 3.4399999999999986,
+          "max_dd_pct": -42.681088749002576,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 16.28799999999999,
+          "max_dd_pct": -32.128,
+          "trades": 7
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -13.716000000000006,
+          "max_dd_pct": -27.74,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.816,
+          "max_dd_pct": -37.684,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -18.816,
+      "seg_avg": -3.201000000000004,
+      "score_return": 26.15629011811762,
+      "score_balanced": 9.200611645524708,
+      "score_stable": -45.67502894315122
+    },
+    {
+      "name": "日线EMA+30m稳定ADX35",
+      "spec": {
+        "name": "日线EMA+30m稳定ADX35",
+        "mode": "daily_filter_ema_stable",
+        "adx_threshold": 35.0
+      },
+      "full_ret": 11.195283718219029,
+      "full_dd": -57.572277485550735,
+      "full_trades": 8,
+      "test_ret": 1.738498472556449,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.719999999999991,
+          "max_dd_pct": -41.255665754162365,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.319999999999997,
+          "max_dd_pct": -32.532000000000004,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -1.780000000000004,
+      "score_return": 11.195283718219029,
+      "score_balanced": 6.649971558966291,
+      "score_stable": -47.125206260831945
+    },
+    {
+      "name": "EMA26/46",
+      "spec": {
+        "name": "EMA26/46",
+        "mode": "ema_cross",
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "full_ret": 43.75126903459123,
+      "full_dd": -67.51794467787114,
+      "full_trades": 131,
+      "test_ret": -12.653835539358427,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -14.439999999999998,
+          "max_dd_pct": -67.51794467787114,
+          "trades": 19
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 4.3279999999999985,
+          "max_dd_pct": -75.88145530479481,
+          "trades": 41
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.076000000000008,
+          "max_dd_pct": -70.72327894467983,
+          "trades": 35
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -34.17600000000001,
+          "max_dd_pct": -60.80372563533185,
+          "trades": 53
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -34.17600000000001,
+      "seg_avg": -16.591000000000005,
+      "score_return": 43.75126903459123,
+      "score_balanced": 4.298048804284134,
+      "score_stable": -107.35850670525346
+    },
+    {
+      "name": "EMA稳定ADX35",
+      "spec": {
+        "name": "EMA稳定ADX35",
+        "mode": "ema_stable",
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "adx_threshold": 35.0
+      },
+      "full_ret": 2.002832724832615,
+      "full_dd": -59.00911008392048,
+      "full_trades": 14,
+      "test_ret": 1.738498472556449,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 11.040000000000006,
+          "max_dd_pct": -59.00911008392048,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 9.519999999999996,
+          "max_dd_pct": -33.33200000000001,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -0.40000000000000036,
+      "score_return": 2.002832724832615,
+      "score_balanced": 2.757466271856263,
+      "score_stable": -47.4125727805059
+    }
+  ],
+  "all": [
+    {
+      "name": "EMA26/46",
+      "spec": {
+        "name": "EMA26/46",
+        "mode": "ema_cross",
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "full_ret": 43.75126903459123,
+      "full_dd": -67.51794467787114,
+      "full_trades": 131,
+      "test_ret": -12.653835539358427,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -14.439999999999998,
+          "max_dd_pct": -67.51794467787114,
+          "trades": 19
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 4.3279999999999985,
+          "max_dd_pct": -75.88145530479481,
+          "trades": 41
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.076000000000008,
+          "max_dd_pct": -70.72327894467983,
+          "trades": 35
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -34.17600000000001,
+          "max_dd_pct": -60.80372563533185,
+          "trades": 53
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -34.17600000000001,
+      "seg_avg": -16.591000000000005,
+      "score_return": 43.75126903459123,
+      "score_balanced": 4.298048804284134,
+      "score_stable": -107.35850670525346
+    },
+    {
+      "name": "EMA12/48",
+      "spec": {
+        "name": "EMA12/48",
+        "mode": "ema_cross",
+        "ema_fast": 12,
+        "ema_slow": 48
+      },
+      "full_ret": 11.326084955786108,
+      "full_dd": -52.69014853942935,
+      "full_trades": 207,
+      "test_ret": -19.94971909728208,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 16.759999999999998,
+          "max_dd_pct": -52.08957085828343,
+          "trades": 19
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -2.7920000000000056,
+          "max_dd_pct": -75.01165884838011,
+          "trades": 49
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -83.036,
+          "max_dd_pct": -109.10222591066719,
+          "trades": 79
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -37.936,
+          "max_dd_pct": -65.51923193777723,
+          "trades": 77
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -83.036,
+      "seg_avg": -26.751,
+      "score_return": 11.326084955786108,
+      "score_balanced": -20.122032118056374,
+      "score_stable": -254.6208892565269
+    },
+    {
+      "name": "EMA5/20",
+      "spec": {
+        "name": "EMA5/20",
+        "mode": "ema_cross",
+        "ema_fast": 5,
+        "ema_slow": 20
+      },
+      "full_ret": -96.0116163478989,
+      "full_dd": -98.9903915578267,
+      "full_trades": 475,
+      "test_ret": -37.21827044536763,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -19.720000000000006,
+          "max_dd_pct": -54.02799092928969,
+          "trades": 71
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -58.55200000000001,
+          "max_dd_pct": -90.56895662636796,
+          "trades": 153
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -15.044000000000002,
+          "max_dd_pct": -88.19327607072228,
+          "trades": 133
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -38.976,
+          "max_dd_pct": -62.25822449991735,
+          "trades": 133
+        }
+      ],
+      "seg_wins": 0,
+      "seg_n": 4,
+      "seg_min": -58.55200000000001,
+      "seg_avg": -33.073,
+      "score_return": -96.0116163478989,
+      "score_balanced": -75.33485936190709,
+      "score_stable": -214.06321353424917
+    },
+    {
+      "name": "MA8/21/55",
+      "spec": {
+        "name": "MA8/21/55",
+        "mode": "ma_trend",
+        "ma_s": 8,
+        "ma_m": 21,
+        "ma_l": 55
+      },
+      "full_ret": -44.170637975871465,
+      "full_dd": -67.48907204968974,
+      "full_trades": 393,
+      "test_ret": -47.779710064301085,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 8.640000000000004,
+          "max_dd_pct": -56.09060481780042,
+          "trades": 44
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -16.592000000000006,
+          "max_dd_pct": -60.539484203357716,
+          "trades": 99
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -21.640000000000004,
+          "max_dd_pct": -74.4943265910212,
+          "trades": 106
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -56.25600000000001,
+          "max_dd_pct": -68.26194200457226,
+          "trades": 135
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -56.25600000000001,
+      "seg_avg": -21.462000000000003,
+      "score_return": -44.170637975871465,
+      "score_balanced": -43.41155801066226,
+      "score_stable": -191.1556694420885
+    },
+    {
+      "name": "Donchian12持仓",
+      "spec": {
+        "name": "Donchian12持仓",
+        "mode": "breakout",
+        "donchian": 12,
+        "ffill": true
+      },
+      "full_ret": -34.92238025199488,
+      "full_dd": -72.26576351069352,
+      "full_trades": 171,
+      "test_ret": -19.674956694358748,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -7.599999999999996,
+          "max_dd_pct": -56.05790077796199,
+          "trades": 23
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -18.87200000000001,
+          "max_dd_pct": -72.21535696230971,
+          "trades": 51
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -91.156,
+          "max_dd_pct": -114.6621801705757,
+          "trades": 57
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -40.856,
+          "max_dd_pct": -74.95336400945156,
+          "trades": 45
+        }
+      ],
+      "seg_wins": 0,
+      "seg_n": 4,
+      "seg_min": -91.156,
+      "seg_avg": -39.621,
+      "score_return": -34.92238025199488,
+      "score_balanced": -51.53280796627373,
+      "score_stable": -297.7586310493181
+    },
+    {
+      "name": "Donchian20持仓",
+      "spec": {
+        "name": "Donchian20持仓",
+        "mode": "breakout",
+        "donchian": 20,
+        "ffill": true
+      },
+      "full_ret": -26.639850913320974,
+      "full_dd": -71.9318187298262,
+      "full_trades": 139,
+      "test_ret": -10.960374379502369,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -21.599999999999998,
+          "max_dd_pct": -58.291977732706165,
+          "trades": 23
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -17.87200000000001,
+          "max_dd_pct": -68.97353802369811,
+          "trades": 41
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -69.556,
+          "max_dd_pct": -95.44874908914258,
+          "trades": 47
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -24.616000000000003,
+          "max_dd_pct": -63.24140536456366,
+          "trades": 29
+        }
+      ],
+      "seg_wins": 0,
+      "seg_n": 4,
+      "seg_min": -69.556,
+      "seg_avg": -33.411,
+      "score_return": -26.639850913320974,
+      "score_balanced": -41.02678805070279,
+      "score_stable": -228.53455093571642
+    },
+    {
+      "name": "Donchian40持仓",
+      "spec": {
+        "name": "Donchian40持仓",
+        "mode": "breakout",
+        "donchian": 40,
+        "ffill": true
+      },
+      "full_ret": 52.74399496726991,
+      "full_dd": -71.31003559376877,
+      "full_trades": 75,
+      "test_ret": 8.092267442717539,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 36.08,
+          "max_dd_pct": -71.31003559376877,
+          "trades": 15
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 23.727999999999994,
+          "max_dd_pct": -63.336255547641215,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -9.236,
+          "max_dd_pct": -63.898906874668015,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 28.576,
+          "max_dd_pct": -58.24155765135382,
+          "trades": 17
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -9.236,
+      "seg_avg": 19.787,
+      "score_return": 52.74399496726991,
+      "score_balanced": 33.71054613638616,
+      "score_stable": 7.07612660260501
+    },
+    {
+      "name": "RSI动量10",
+      "spec": {
+        "name": "RSI动量10",
+        "mode": "rsi_momo",
+        "rsi_period": 10,
+        "ffill": true
+      },
+      "full_ret": 48.75041905404422,
+      "full_dd": -68.28096366155634,
+      "full_trades": 151,
+      "test_ret": -6.634718953085672,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 32.31999999999999,
+          "max_dd_pct": -68.28096366155634,
+          "trades": 29
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 44.48799999999999,
+          "max_dd_pct": -57.410969283674305,
+          "trades": 47
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -24.67600000000001,
+          "max_dd_pct": -66.4869721473495,
+          "trades": 35
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -9.976000000000006,
+          "max_dd_pct": -50.59723889555823,
+          "trades": 43
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -24.67600000000001,
+      "seg_avg": 10.538999999999993,
+      "score_return": 48.75041905404422,
+      "score_balanced": 17.7620792817671,
+      "score_stable": -61.00155220885412
+    },
+    {
+      "name": "RSI动量14",
+      "spec": {
+        "name": "RSI动量14",
+        "mode": "rsi_momo",
+        "rsi_period": 14,
+        "ffill": true
+      },
+      "full_ret": 6.918845825738851,
+      "full_dd": -77.21149070337809,
+      "full_trades": 177,
+      "test_ret": 10.296935429313248,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 56.879999999999995,
+          "max_dd_pct": -54.02133936871034,
+          "trades": 25
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -38.63200000000001,
+          "max_dd_pct": -92.26283048211509,
+          "trades": 55
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -37.476,
+          "max_dd_pct": -64.0981874339592,
+          "trades": 45
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 32.93600000000001,
+          "max_dd_pct": -54.3482121714421,
+          "trades": 53
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -38.63200000000001,
+      "seg_avg": 3.426999999999998,
+      "score_return": 6.918845825738851,
+      "score_balanced": -0.41279818934852663,
+      "score_stable": -96.18983042601904
+    },
+    {
+      "name": "RSI反转7",
+      "spec": {
+        "name": "RSI反转7",
+        "mode": "rsi_revert",
+        "rsi_period": 7,
+        "rsi_ob": 70,
+        "rsi_os": 30,
+        "ffill": true
+      },
+      "full_ret": -185.644686697478,
+      "full_dd": -178.42249045794435,
+      "full_trades": 487,
+      "test_ret": -32.84767686302108,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -68.8,
+          "max_dd_pct": -129.1136667247488,
+          "trades": 67
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -18.92799999999999,
+          "max_dd_pct": -76.3060538116592,
+          "trades": 159
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": 21.476000000000006,
+          "max_dd_pct": -62.97616464680904,
+          "trades": 145
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -33.343999999999994,
+          "max_dd_pct": -93.02516411378556,
+          "trades": 115
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -68.8,
+      "seg_avg": -24.898999999999994,
+      "score_return": -185.644686697478,
+      "score_balanced": -116.79078362028707,
+      "score_stable": -243.5083365230994
+    },
+    {
+      "name": "MACD",
+      "spec": {
+        "name": "MACD",
+        "mode": "macd"
+      },
+      "full_ret": -86.22323506614738,
+      "full_dd": -104.86750202277808,
+      "full_trades": 645,
+      "test_ret": -68.26701099425756,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 18.680000000000007,
+          "max_dd_pct": -51.95490308383324,
+          "trades": 71
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -11.447999999999992,
+          "max_dd_pct": -77.59593002327759,
+          "trades": 187
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -21.604,
+          "max_dd_pct": -83.68860779261342,
+          "trades": 177
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -50.70399999999999,
+          "max_dd_pct": -105.32952652867,
+          "trades": 219
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -50.70399999999999,
+      "seg_avg": -16.268999999999995,
+      "score_return": -86.22323506614738,
+      "score_balanced": -68.54882152872719,
+      "score_stable": -192.21900590168437
+    },
+    {
+      "name": "动量0.2%",
+      "spec": {
+        "name": "动量0.2%",
+        "mode": "momentum",
+        "mom_th": 0.002
+      },
+      "full_ret": -207.53939365625803,
+      "full_dd": -158.56785962062935,
+      "full_trades": 1045,
+      "test_ret": -111.17311086920903,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -7.440000000000002,
+          "max_dd_pct": -56.94136043784207,
+          "trades": 129
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -83.31200000000001,
+          "max_dd_pct": -97.75532105169022,
+          "trades": 307
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -49.844,
+          "max_dd_pct": -105.57873405650258,
+          "trades": 283
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -123.096,
+          "max_dd_pct": -119.4187123668365,
+          "trades": 341
+        }
+      ],
+      "seg_wins": 0,
+      "seg_n": 4,
+      "seg_min": -123.096,
+      "seg_avg": -65.923,
+      "score_return": -207.53939365625803,
+      "score_balanced": -159.80955857943943,
+      "score_stable": -456.5881273587304
+    },
+    {
+      "name": "多因子投票",
+      "spec": {
+        "name": "多因子投票",
+        "mode": "combo",
+        "combo_min": 2
+      },
+      "full_ret": -94.23393031738327,
+      "full_dd": -103.63409585558018,
+      "full_trades": 610,
+      "test_ret": -55.00394817712896,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 9.15999999999999,
+          "max_dd_pct": -51.88955683774885,
+          "trades": 79
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -33.919999999999995,
+          "max_dd_pct": -72.49833592189927,
+          "trades": 178
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -28.764,
+          "max_dd_pct": -86.94870283018868,
+          "trades": 181
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -47.36,
+          "max_dd_pct": -84.77817796018651,
+          "trades": 184
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -47.36,
+      "seg_avg": -25.221,
+      "score_return": -94.23393031738327,
+      "score_balanced": -68.07947614071614,
+      "score_stable": -175.3087932596805
+    },
+    {
+      "name": "EMA稳定ADX25",
+      "spec": {
+        "name": "EMA稳定ADX25",
+        "mode": "ema_stable",
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "adx_threshold": 25.0
+      },
+      "full_ret": 1.7468521318453556,
+      "full_dd": -59.00911008392048,
+      "full_trades": 14,
+      "test_ret": 1.4825178795691896,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 11.040000000000006,
+          "max_dd_pct": -59.00911008392048,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 9.519999999999996,
+          "max_dd_pct": -33.33200000000001,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -0.40000000000000036,
+      "score_return": 1.7468521318453556,
+      "score_balanced": 2.603877916063908,
+      "score_stable": -47.54056307699952
+    },
+    {
+      "name": "EMA稳定ADX35",
+      "spec": {
+        "name": "EMA稳定ADX35",
+        "mode": "ema_stable",
+        "ema_fast": 26,
+        "ema_slow": 46,
+        "adx_threshold": 35.0
+      },
+      "full_ret": 2.002832724832615,
+      "full_dd": -59.00911008392048,
+      "full_trades": 14,
+      "test_ret": 1.738498472556449,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 11.040000000000006,
+          "max_dd_pct": -59.00911008392048,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 9.519999999999996,
+          "max_dd_pct": -33.33200000000001,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -0.40000000000000036,
+      "score_return": 2.002832724832615,
+      "score_balanced": 2.757466271856263,
+      "score_stable": -47.4125727805059
+    },
+    {
+      "name": "BOLL中轨",
+      "spec": {
+        "name": "BOLL中轨",
+        "mode": "boll",
+        "filters": "none",
+        "risk": false
+      },
+      "full_ret": -147.24802977781474,
+      "full_dd": -123.97290058705515,
+      "full_trades": 923,
+      "test_ret": -106.50438271158356,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 19.920000000000005,
+          "max_dd_pct": -53.18390219052473,
+          "trades": 95
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -63.712,
+          "max_dd_pct": -81.14380932543816,
+          "trades": 267
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -40.083999999999996,
+          "max_dd_pct": -97.36889583834495,
+          "trades": 249
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -119.49600000000001,
+          "max_dd_pct": -117.25360962940208,
+          "trades": 311
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -119.49600000000001,
+      "seg_avg": -50.843,
+      "score_return": -147.24802977781474,
+      "score_balanced": -120.67002354150088,
+      "score_stable": -421.53477147320285
+    },
+    {
+      "name": "BBI",
+      "spec": {
+        "name": "BBI",
+        "mode": "bbi",
+        "filters": "none",
+        "risk": false
+      },
+      "full_ret": -289.6479812444874,
+      "full_dd": -193.5904591771036,
+      "full_trades": 1433,
+      "test_ret": -162.29820911364286,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 14.359999999999996,
+          "max_dd_pct": -58.96761370279434,
+          "trades": 159
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -116.112,
+          "max_dd_pct": -111.99119911991198,
+          "trades": 417
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -77.364,
+          "max_dd_pct": -122.84582861906745,
+          "trades": 391
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -189.696,
+          "max_dd_pct": -169.7035344392676,
+          "trades": 461
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -189.696,
+      "seg_avg": -92.203,
+      "score_return": -289.6479812444874,
+      "score_balanced": -216.78140319708908,
+      "score_stable": -673.9551963922421
+    },
+    {
+      "name": "三指标同向",
+      "spec": {
+        "name": "三指标同向",
+        "mode": "triple",
+        "filters": "none",
+        "risk": false
+      },
+      "full_ret": -102.67605759541705,
+      "full_dd": -101.65501982221599,
+      "full_trades": 685,
+      "test_ret": -78.75892989988645,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.039999999999999,
+          "max_dd_pct": -51.09940872135994,
+          "trades": 67
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -50.792000000000016,
+          "max_dd_pct": -75.48772090888227,
+          "trades": 199
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -39.72,
+          "max_dd_pct": -78.04436113714463,
+          "trades": 188
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -96.85600000000001,
+          "max_dd_pct": -98.76531974274967,
+          "trades": 225
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -96.85600000000001,
+      "seg_avg": -45.83200000000001,
+      "score_return": -102.67605759541705,
+      "score_balanced": -88.28446199147652,
+      "score_stable": -335.27846891438645
+    },
+    {
+      "name": "三指标+ADX",
+      "spec": {
+        "name": "三指标+ADX",
+        "mode": "triple",
+        "filters": "adx",
+        "risk": false
+      },
+      "full_ret": -65.763862225871,
+      "full_dd": -81.26378985298285,
+      "full_trades": 501,
+      "test_ret": 0.0,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -6.959999999999999,
+          "max_dd_pct": -51.41171382676386,
+          "trades": 67
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -48.03200000000001,
+          "max_dd_pct": -76.25048254563502,
+          "trades": 155
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -24.080000000000002,
+          "max_dd_pct": -67.1832611832612,
+          "trades": 142
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -50.256000000000014,
+          "max_dd_pct": -63.65527220112137,
+          "trades": 125
+        }
+      ],
+      "seg_wins": 0,
+      "seg_n": 4,
+      "seg_min": -50.256000000000014,
+      "seg_avg": -32.33200000000001,
+      "score_return": -65.763862225871,
+      "score_balanced": -51.05911336829583,
+      "score_stable": -167.0207579705966
+    },
+    {
+      "name": "稳定MA20/50+ADX",
+      "spec": {
+        "name": "稳定MA20/50+ADX",
+        "mode": "stable_ma",
+        "filters": "adx_div",
+        "risk": false
+      },
+      "full_ret": -9.857044861293273,
+      "full_dd": -63.482556197203266,
+      "full_trades": 42,
+      "test_ret": 0.0,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 17.440000000000012,
+          "max_dd_pct": -63.482556197203266,
+          "trades": 14
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -7.879999999999998,
+          "max_dd_pct": -59.90459904599046,
+          "trades": 12
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -19.799999999999997,
+          "max_dd_pct": -40.39656351258956,
+          "trades": 10
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -19.799999999999997,
+      "seg_avg": -2.559999999999996,
+      "score_return": -9.857044861293273,
+      "score_balanced": -10.415201374097798,
+      "score_stable": -57.096511239440645
+    },
+    {
+      "name": "日线EMA+30mEMA26/46",
+      "spec": {
+        "name": "日线EMA+30mEMA26/46",
+        "mode": "daily_filter_ema",
+        "ema_fast": 26,
+        "ema_slow": 46
+      },
+      "full_ret": 59.76789434746455,
+      "full_dd": -65.08204459315284,
+      "full_trades": 69,
+      "test_ret": -3.087493099684868,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 18.720000000000002,
+          "max_dd_pct": -45.35948894111975,
+          "trades": 12
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.047999999999991,
+          "max_dd_pct": -55.50862864654715,
+          "trades": 23
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -49.596000000000004,
+          "max_dd_pct": -76.72872731550927,
+          "trades": 23
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.736000000000008,
+          "max_dd_pct": -54.96073578390931,
+          "trades": 27
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -49.596000000000004,
+      "seg_avg": -9.891000000000005,
+      "score_return": 59.76789434746455,
+      "score_balanced": 17.12835243007592,
+      "score_stable": -133.348155468473
+    },
+    {
+      "name": "日线EMA+30mEMA12/48",
+      "spec": {
+        "name": "日线EMA+30mEMA12/48",
+        "mode": "daily_filter_ema",
+        "ema_fast": 12,
+        "ema_slow": 48
+      },
+      "full_ret": 34.353807225290446,
+      "full_dd": -51.652459258186134,
+      "full_trades": 111,
+      "test_ret": -6.735434878646707,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 34.31999999999999,
+          "max_dd_pct": -44.90749111070934,
+          "trades": 12
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 0.08799999999999919,
+          "max_dd_pct": -59.69637040483947,
+          "trades": 27
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -74.47600000000001,
+          "max_dd_pct": -95.81800523852968,
+          "trades": 45
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.096,
+          "max_dd_pct": -54.726693843544496,
+          "trades": 41
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -74.47600000000001,
+      "seg_avg": -14.541000000000006,
+      "score_return": 34.353807225290446,
+      "score_balanced": 2.0275670256589144,
+      "score_stable": -207.12620929096062
+    },
+    {
+      "name": "日线EMA+30mDon20",
+      "spec": {
+        "name": "日线EMA+30mDon20",
+        "mode": "daily_filter_donchian",
+        "donchian": 20
+      },
+      "full_ret": 71.21310804598878,
+      "full_dd": -47.72928603442,
+      "full_trades": 56,
+      "test_ret": 3.9791212469595827,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 42.36,
+          "max_dd_pct": -28.85699436293128,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 0.6479999999999819,
+          "max_dd_pct": -54.15664865782254,
+          "trades": 13
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -42.63600000000001,
+          "max_dd_pct": -71.776952542472,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 8.95999999999999,
+          "max_dd_pct": -50.12879958784132,
+          "trades": 16
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -42.63600000000001,
+      "seg_avg": 2.3329999999999904,
+      "score_return": 71.21310804598878,
+      "score_balanced": 35.46267456262442,
+      "score_stable": -90.46429658340423
+    },
+    {
+      "name": "日线EMA+30mDon40",
+      "spec": {
+        "name": "日线EMA+30mDon40",
+        "mode": "daily_filter_donchian",
+        "donchian": 40
+      },
+      "full_ret": 68.30520754108966,
+      "full_dd": -59.56017690100397,
+      "full_trades": 42,
+      "test_ret": 2.3344845030116357,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 21.76,
+          "max_dd_pct": -37.65616679637898,
+          "trades": 6
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 3.1279999999999974,
+          "max_dd_pct": -56.13667864113372,
+          "trades": 11
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.516000000000002,
+          "max_dd_pct": -61.044336543819156,
+          "trades": 11
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 10.840000000000005,
+          "max_dd_pct": -50.61647311699555,
+          "trades": 14
+        }
+      ],
+      "seg_wins": 3,
+      "seg_n": 4,
+      "seg_min": -22.516000000000002,
+      "seg_avg": 3.303000000000001,
+      "score_return": 68.30520754108966,
+      "score_balanced": 37.22595338188759,
+      "score_stable": -33.29279312869498
+    },
+    {
+      "name": "日线Don+30mEMA",
+      "spec": {
+        "name": "日线Don+30mEMA",
+        "mode": "daily_donchian_filter_ema",
+        "donchian": 20
+      },
+      "full_ret": 26.15629011811762,
+      "full_dd": -69.52989749231219,
+      "full_trades": 63,
+      "test_ret": -10.642098889377571,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 3.4399999999999986,
+          "max_dd_pct": -42.681088749002576,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 16.28799999999999,
+          "max_dd_pct": -32.128,
+          "trades": 7
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -13.716000000000006,
+          "max_dd_pct": -27.74,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -18.816,
+          "max_dd_pct": -37.684,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -18.816,
+      "seg_avg": -3.201000000000004,
+      "score_return": 26.15629011811762,
+      "score_balanced": 9.200611645524708,
+      "score_stable": -45.67502894315122
+    },
+    {
+      "name": "日线ADX25+30mEMA",
+      "spec": {
+        "name": "日线ADX25+30mEMA",
+        "mode": "daily_adx_filter_ema",
+        "adx_threshold": 25.0
+      },
+      "full_ret": 0.05953475276556652,
+      "full_dd": -66.60071089155136,
+      "full_trades": 43,
+      "test_ret": -16.572170407654106,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -17.159999999999997,
+          "max_dd_pct": -40.73544140792674,
+          "trades": 4
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -5.592000000000008,
+          "max_dd_pct": -35.28,
+          "trades": 9
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -12.356,
+          "max_dd_pct": -46.265921378172834,
+          "trades": 7
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -35.29600000000001,
+          "max_dd_pct": -37.29200000000001,
+          "trades": 11
+        }
+      ],
+      "seg_wins": 0,
+      "seg_n": 4,
+      "seg_min": -35.29600000000001,
+      "seg_avg": -17.601000000000003,
+      "score_return": 0.05953475276556652,
+      "score_balanced": -22.1047268141573,
+      "score_stable": -127.49422738213735
+    },
+    {
+      "name": "日线ADX35+30mEMA",
+      "spec": {
+        "name": "日线ADX35+30mEMA",
+        "mode": "daily_adx_filter_ema",
+        "adx_threshold": 35.0
+      },
+      "full_ret": -18.96212746337438,
+      "full_dd": -64.11108433553476,
+      "full_trades": 29,
+      "test_ret": -15.75086295033772,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -13.680000000000003,
+          "max_dd_pct": -38.24581485191014,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 13.880000000000003,
+          "max_dd_pct": -35.08,
+          "trades": 8
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -28.716000000000008,
+          "max_dd_pct": -31.652000000000008,
+          "trades": 1
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -34.016000000000005,
+          "max_dd_pct": -36.01200000000001,
+          "trades": 9
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -34.016000000000005,
+      "seg_avg": -15.633000000000003,
+      "score_return": -18.96212746337438,
+      "score_balanced": -20.85568622574751,
+      "score_stable": -107.74564834227584
+    },
+    {
+      "name": "30mEMA+Don突破",
+      "spec": {
+        "name": "30mEMA+Don突破",
+        "mode": "ema_donchian_breakout",
+        "donchian": 20
+      },
+      "full_ret": 29.349049064170686,
+      "full_dd": -56.01967755531454,
+      "full_trades": 94,
+      "test_ret": -2.975163748456866,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 29.200000000000003,
+          "max_dd_pct": -55.09974194076926,
+          "trades": 10
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -10.71200000000001,
+          "max_dd_pct": -61.98465682829701,
+          "trades": 27
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -34.716,
+          "max_dd_pct": -71.25025698258392,
+          "trades": 31
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -4.84,
+          "max_dd_pct": -57.06723456038942,
+          "trades": 26
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -34.716,
+      "seg_avg": -5.267000000000002,
+      "score_return": 29.349049064170686,
+      "score_balanced": 2.062635242679722,
+      "score_stable": -101.83951738529134
+    },
+    {
+      "name": "30mEMA+Don同向",
+      "spec": {
+        "name": "30mEMA+Don同向",
+        "mode": "ema_donchian_both",
+        "donchian": 20
+      },
+      "full_ret": 57.60276337631638,
+      "full_dd": -64.91815006522745,
+      "full_trades": 57,
+      "test_ret": 12.755202374845442,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": -0.16000000000000458,
+          "max_dd_pct": -64.91815006522745,
+          "trades": 7
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": -25.072000000000006,
+          "max_dd_pct": -78.45393763682623,
+          "trades": 21
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -12.436000000000003,
+          "max_dd_pct": -63.695914982147386,
+          "trades": 19
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 11.495999999999995,
+          "max_dd_pct": -65.92307692307693,
+          "trades": 19
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -25.072000000000006,
+      "seg_avg": -6.543000000000005,
+      "score_return": 57.60276337631638,
+      "score_balanced": 17.586423315711524,
+      "score_stable": -66.8220288256228
+    },
+    {
+      "name": "日线EMA+30m稳定ADX35",
+      "spec": {
+        "name": "日线EMA+30m稳定ADX35",
+        "mode": "daily_filter_ema_stable",
+        "adx_threshold": 35.0
+      },
+      "full_ret": 11.195283718219029,
+      "full_dd": -57.572277485550735,
+      "full_trades": 8,
+      "test_ret": 1.738498472556449,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 4.719999999999991,
+          "max_dd_pct": -41.255665754162365,
+          "trades": 2
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 10.319999999999997,
+          "max_dd_pct": -32.532000000000004,
+          "trades": 2
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -22.160000000000004,
+          "max_dd_pct": -41.83926596730327,
+          "trades": 4
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        }
+      ],
+      "seg_wins": 2,
+      "seg_n": 4,
+      "seg_min": -22.160000000000004,
+      "seg_avg": -1.780000000000004,
+      "score_return": 11.195283718219029,
+      "score_balanced": 6.649971558966291,
+      "score_stable": -47.125206260831945
+    },
+    {
+      "name": "60mEMA+30mEMA",
+      "spec": {
+        "name": "60mEMA+30mEMA",
+        "ltf_ema_fast": 26,
+        "ltf_ema_slow": 46,
+        "htf_ema_fast": 6,
+        "htf_ema_slow": 24
+      },
+      "full_ret": -5.202565833217321,
+      "full_dd": -67.33209694406801,
+      "full_trades": 137,
+      "test_ret": -19.68338830932551,
+      "segments": [
+        {
+          "symbol": "FG509",
+          "return_pct": 0.0,
+          "max_dd_pct": 0.0,
+          "trades": 0
+        },
+        {
+          "symbol": "FG601",
+          "return_pct": 6.167999999999996,
+          "max_dd_pct": -74.26762371615314,
+          "trades": 35
+        },
+        {
+          "symbol": "FG605",
+          "return_pct": -41.516000000000005,
+          "max_dd_pct": -77.96495386438669,
+          "trades": 51
+        },
+        {
+          "symbol": "FG609",
+          "return_pct": -48.49600000000001,
+          "max_dd_pct": -65.29837029775763,
+          "trades": 61
+        }
+      ],
+      "seg_wins": 1,
+      "seg_n": 4,
+      "seg_min": -48.49600000000001,
+      "seg_avg": -20.961000000000006,
+      "score_return": -5.202565833217321,
+      "score_balanced": -20.241518536762236,
+      "score_stable": -153.79611354347637
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "symbol": "FG605",
+  "tune_period": [
+    "2025-07-01",
+    "2026-02-28"
+  ],
+  "test_period": [
+    "2026-03-01",
+    "2026-05-31"
+  ],
+  "best": {
+    "mode": "macd",
+    "max_lots": 1,
+    "valid_return": 20.08000000000001,
+    "valid_dd": -68.26960177081006,
+    "valid_sharpe": 2.4455333362528844,
+    "valid_trades": 323
+  },
+  "test_stats": {
+    "capital": 10000.0,
+    "end_equity": 6746.4,
+    "total_return_pct": -32.536,
+    "max_ddpercent": -87.99544233742981,
+    "sharpe_ratio": 6.083573711074928,
+    "total_trades": 135,
+    "bars": 780,
+    "max_lots": 1
+  },
+  "top15": [
+    {
+      "mode": "macd",
+      "max_lots": 1,
+      "valid_return": 20.08000000000001,
+      "valid_dd": -68.26960177081006,
+      "valid_sharpe": 2.4455333362528844,
+      "valid_trades": 323
+    },
+    {
+      "mode": "macd",
+      "max_lots": 2,
+      "valid_return": 20.08000000000001,
+      "valid_dd": -68.26960177081006,
+      "valid_sharpe": 2.4455333362528844,
+      "valid_trades": 323
+    },
+    {
+      "mode": "macd",
+      "max_lots": 3,
+      "valid_return": 20.08000000000001,
+      "valid_dd": -68.26960177081006,
+      "valid_sharpe": 2.4455333362528844,
+      "valid_trades": 323
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 1,
+      "ma_s": 10,
+      "ma_m": 30,
+      "ma_l": 90,
+      "valid_return": -5.279999999999996,
+      "valid_dd": -63.80394366197184,
+      "valid_sharpe": 1.4666805210371405,
+      "valid_trades": 182
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 2,
+      "ma_s": 10,
+      "ma_m": 30,
+      "ma_l": 90,
+      "valid_return": -5.279999999999996,
+      "valid_dd": -63.80394366197184,
+      "valid_sharpe": 1.4666805210371405,
+      "valid_trades": 182
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 3,
+      "ma_s": 10,
+      "ma_m": 30,
+      "ma_l": 90,
+      "valid_return": -5.279999999999996,
+      "valid_dd": -63.80394366197184,
+      "valid_sharpe": 1.4666805210371405,
+      "valid_trades": 182
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 1,
+      "ma_s": 8,
+      "ma_m": 21,
+      "ma_l": 55,
+      "valid_return": -12.280000000000001,
+      "valid_dd": -66.9141111236845,
+      "valid_sharpe": 2.050450174258921,
+      "valid_trades": 222
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 2,
+      "ma_s": 8,
+      "ma_m": 21,
+      "ma_l": 55,
+      "valid_return": -12.280000000000001,
+      "valid_dd": -66.9141111236845,
+      "valid_sharpe": 2.050450174258921,
+      "valid_trades": 222
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 3,
+      "ma_s": 8,
+      "ma_m": 21,
+      "ma_l": 55,
+      "valid_return": -12.280000000000001,
+      "valid_dd": -66.9141111236845,
+      "valid_sharpe": 2.050450174258921,
+      "valid_trades": 222
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 1,
+      "ma_s": 5,
+      "ma_m": 20,
+      "ma_l": 60,
+      "valid_return": -15.639999999999999,
+      "valid_dd": -69.7787074755037,
+      "valid_sharpe": 1.9383089788783496,
+      "valid_trades": 246
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 2,
+      "ma_s": 5,
+      "ma_m": 20,
+      "ma_l": 60,
+      "valid_return": -15.639999999999999,
+      "valid_dd": -69.7787074755037,
+      "valid_sharpe": 1.9383089788783496,
+      "valid_trades": 246
+    },
+    {
+      "mode": "ma_trend",
+      "max_lots": 3,
+      "ma_s": 5,
+      "ma_m": 20,
+      "ma_l": 60,
+      "valid_return": -15.639999999999999,
+      "valid_dd": -69.7787074755037,
+      "valid_sharpe": 1.9383089788783496,
+      "valid_trades": 246
+    },
+    {
+      "mode": "ema_cross",
+      "max_lots": 1,
+      "ema_fast": 8,
+      "ema_slow": 34,
+      "valid_return": -19.520000000000003,
+      "valid_dd": -87.3411718209663,
+      "valid_sharpe": 2.8180066130769177,
+      "valid_trades": 183
+    },
+    {
+      "mode": "ema_cross",
+      "max_lots": 2,
+      "ema_fast": 8,
+      "ema_slow": 34,
+      "valid_return": -19.520000000000003,
+      "valid_dd": -87.3411718209663,
+      "valid_sharpe": 2.8180066130769177,
+      "valid_trades": 183
+    },
+    {
+      "mode": "ema_cross",
+      "max_lots": 3,
+      "ema_fast": 8,
+      "ema_slow": 34,
+      "valid_return": -19.520000000000003,
+      "valid_dd": -87.3411718209663,
+      "valid_sharpe": 2.8180066130769177,
+      "valid_trades": 183
+    }
+  ]
+}
