@@ -1,0 +1,50 @@
+{
+  "mode": "walk_forward",
+  "use_fd_vib": true,
+  "n_folds": 3,
+  "ic_oos_all": 0.047040343120908296,
+  "ic_oos_full_index": 0.047040343120908296,
+  "backtest_oos": {
+    "total_return_pct": 0.07800000000000029,
+    "max_ddpercent": -0.7592458158229491,
+    "sharpe_ratio": 0.26119768759930556,
+    "total_trades": 16,
+    "final_equity": 300234.0
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "predict_start": "2026-04-14",
+      "predict_end": "2026-05-11",
+      "train_bars": 596,
+      "valid_bars": 104,
+      "predict_bars": 200,
+      "ic_valid": -0.25857249612864697,
+      "ic_oos": -0.051207800036838315,
+      "best_iteration": 48
+    },
+    {
+      "fold": 2,
+      "predict_start": "2026-05-12",
+      "predict_end": "2026-06-08",
+      "train_bars": 820,
+      "valid_bars": 80,
+      "predict_bars": 240,
+      "ic_valid": 0.0733433661808603,
+      "ic_oos": 0.03592787373117186,
+      "best_iteration": 1
+    },
+    {
+      "fold": 3,
+      "predict_start": "2026-06-09",
+      "predict_end": "2026-07-06",
+      "train_bars": 1020,
+      "valid_bars": 120,
+      "predict_bars": 224,
+      "ic_valid": -0.023616426128645847,
+      "ic_oos": 0.16136944064001177,
+      "best_iteration": 2
+    }
+  ],
+  "last_model": "D:\\LMS\\fg_model\\artifacts\\fg_lgb_wf_last.pkl"
+}

@@ -1,0 +1,46 @@
+2026-07-09T15:41:26  === daily_job 开始  symbol=FG609  profile=max ===
+2026-07-09T15:41:29  refresh_cache 完成
+2026-07-09T15:41:29  === daily_job 完成 ===
+2026-07-09T15:42:53  === daily_job 开始  symbol=FG609  profile=max ===
+2026-07-09T15:42:56  refresh_cache 完成
+2026-07-09T15:42:56  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-09T15:42:56  === daily_job 完成 ===
+2026-07-09T15:43:21  === daily_job 开始  symbol=FG609  profile=max ===
+2026-07-09T15:43:24  refresh_cache 完成
+2026-07-09T15:43:24  === daily_job 完成 ===
+2026-07-09T16:57:11  === daily_job 开始  symbol=FG609  profile=lms ===
+2026-07-09T16:57:14  refresh_cache 完成
+2026-07-09T16:57:15  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-09T16:57:15  === daily_job 完成 ===
+2026-07-10T08:51:16  === daily_job 开始  symbol=FG609  profile=lms ===
+2026-07-10T08:51:20  refresh_cache 完成
+2026-07-10T08:51:21  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-10T08:51:21  === daily_job 完成 ===
+2026-07-10T15:10:01  === daily_job 开始  symbol=FG609  profile=smart ===
+2026-07-10T15:10:04  refresh_cache 完成
+2026-07-10T15:10:05  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-10T15:10:05  === daily_job 完成 ===
+2026-07-11T12:14:36  === daily_job 开始  symbol=FG609  profile=smart ===
+2026-07-11T12:14:41  refresh_cache 完成
+2026-07-11T12:14:43  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-11T12:14:43  === daily_job 完成 ===
+2026-07-13T15:10:02  === daily_job 开始  symbol=FG609  profile=smart ===
+2026-07-13T15:10:05  refresh_cache 完成
+2026-07-13T15:10:07  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-13T15:10:07  === daily_job 完成 ===
+2026-07-14T08:50:28  === daily_job 开始  symbol=FG609  profile=smart ===
+2026-07-14T08:50:42  refresh_cache 完成
+2026-07-14T08:50:44  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-14T08:50:44  === daily_job 完成 ===
+2026-07-14T15:10:01  === daily_job 开始  symbol=FG609  profile=smart ===
+2026-07-14T15:10:04  refresh_cache 完成
+2026-07-14T15:10:05  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-14T15:10:05  === daily_job 完成 ===
+2026-07-15T00:58:40  === daily_job 开始  symbol=FG609  profile=smart ===
+2026-07-15T00:58:46  refresh_cache 完成
+2026-07-15T00:58:48  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-15T00:58:48  === daily_job 完成 ===
+2026-07-15T15:10:04  === daily_job 开始  symbol=FG609  profile=smart ===
+2026-07-15T15:10:07  refresh_cache 完成
+2026-07-15T15:10:09  live_signal -> D:\LMS\fd_vib\artifacts\live_signal.json
+2026-07-15T15:10:09  === daily_job 完成 ===

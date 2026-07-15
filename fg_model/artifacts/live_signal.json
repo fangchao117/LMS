@@ -1,0 +1,9 @@
+{
+  "updated": "2026-07-10T15:15:46",
+  "datetime": "2026-06-30 14:30:00",
+  "score": -0.0007834561378640181,
+  "target_position": -1,
+  "action": "SHORT",
+  "model": "fg_lgb_wf",
+  "threshold": 0.00012
+}

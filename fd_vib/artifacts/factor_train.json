@@ -1,0 +1,142 @@
+{
+  "horizon": 4,
+  "train_end": "2026-02-28",
+  "valid_end": "2026-03-31",
+  "lgb_meta": {
+    "ic_all": 0.40767359599699377,
+    "ic_test": -0.0013434095403243092,
+    "best_iteration": 13,
+    "top_features": [
+      {
+        "name": "oi_r_20",
+        "gain": 0
+      },
+      {
+        "name": "std_20",
+        "gain": 0
+      },
+      {
+        "name": "corr_ro_20",
+        "gain": 0
+      },
+      {
+        "name": "oi_r_30",
+        "gain": 0
+      },
+      {
+        "name": "ret_10",
+        "gain": 0
+      },
+      {
+        "name": "corr_ro_30",
+        "gain": 0
+      },
+      {
+        "name": "ret_20",
+        "gain": 0
+      },
+      {
+        "name": "std_30",
+        "gain": 0
+      },
+      {
+        "name": "ret_5",
+        "gain": 0
+      },
+      {
+        "name": "ret_30",
+        "gain": 0
+      }
+    ],
+    "train_end": "2026-02-28",
+    "valid_end": "2026-03-31",
+    "horizon": 4
+  },
+  "lgb_ic": 0.40767359599699377,
+  "template_top": [
+    {
+      "name": "disc_mom_vol_5",
+      "ic": -0.10399779883031678
+    },
+    {
+      "name": "disc_don_pos_20",
+      "ic": -0.1031757157337632
+    },
+    {
+      "name": "disc_accel_30",
+      "ic": -0.10006588728149393
+    },
+    {
+      "name": "disc_accel_40",
+      "ic": -0.09269134967272342
+    },
+    {
+      "name": "disc_don_pos_30",
+      "ic": -0.0909862985486263
+    },
+    {
+      "name": "disc_accel_20",
+      "ic": -0.0859899692110381
+    }
+  ],
+  "discovered_ic": [
+    {
+      "name": "disc_lgb_score",
+      "ic": 0.4063111464163679,
+      "kind": "lgb"
+    },
+    {
+      "name": "disc_mom_vol_5",
+      "ic": -0.10399779883031678,
+      "kind": "template"
+    },
+    {
+      "name": "disc_don_pos_20",
+      "ic": -0.1031757157337632,
+      "kind": "template"
+    },
+    {
+      "name": "disc_accel_30",
+      "ic": -0.10006588728149393,
+      "kind": "template"
+    },
+    {
+      "name": "disc_accel_40",
+      "ic": -0.09269134967272342,
+      "kind": "template"
+    },
+    {
+      "name": "disc_don_pos_30",
+      "ic": -0.0909862985486263,
+      "kind": "template"
+    },
+    {
+      "name": "disc_accel_20",
+      "ic": -0.0859899692110381,
+      "kind": "template"
+    }
+  ],
+  "backtest": {
+    "Don38": {
+      "return_pct": 204.36799999999997,
+      "max_dd": -66.80966254502077,
+      "sharpe": 2.542822634598298,
+      "trades": 247
+    },
+    "Don+新因子": {
+      "return_pct": -30.56,
+      "max_dd": -72.01276175524777,
+      "sharpe": 0.6871202672400741,
+      "trades": 178
+    }
+  },
+  "factor_for_combo": [
+    "disc_lgb_score",
+    "disc_mom_vol_5",
+    "disc_don_pos_20",
+    "disc_accel_30",
+    "disc_accel_40",
+    "disc_don_pos_30",
+    "disc_accel_20"
+  ]
+}

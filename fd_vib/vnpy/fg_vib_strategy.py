@@ -21,7 +21,7 @@ import pandas as pd
 
 from vnpy_ctastrategy import TargetPosTemplate
 from vnpy_ctastrategy.base import EngineType
-from vnpy.trader.constant import Direction, Interval, Status
+from vnpy.trader.constant import Direction, Exchange, Interval, Status
 from vnpy.trader.object import BarData, OrderData, TickData
 from vnpy.trader.utility import BarGenerator
 
@@ -93,6 +93,12 @@ class FgVibDonStrategy(TargetPosTemplate):
         self._startup_target: int = 0
         self._tick_seen: bool = False
         self._tick_count: int = 0
+        self._1m_buf: list[dict[str, Any]] = []
+        self._fg30m_done: set[str] = set()
+        self._bt_pending_exec: int | None = None
+        self._bt_df30: pd.DataFrame | None = None
+        self._bt_sig: pd.Series | None = None
+        self._bt_close_idx: int = 0
 
         pt = self.get_pricetick()
         if pt and pt > 0:
@@ -111,17 +117,29 @@ class FgVibDonStrategy(TargetPosTemplate):
             on_window_bar=self.on_30m_bar,
             interval=Interval.MINUTE,
         )
-        if self._load_bars_from_fg30m():
+        warm_days = max(45, (self.bar_window + self.donchian) // 8 + 15)
+        if self.get_engine_type() == EngineType.BACKTESTING:
+            self._bars = []
+            self._1m_buf = []
+            self._fg30m_done = set()
+            self._bt_close_idx = 0
+            self._init_bt_parquet()
+            self.load_bar(warm_days)
+            n30 = len(self._bt_df30) if self._bt_df30 is not None else 0
+            self.write_log(
+                f"回测 parquet30m={n30}根  warmup={len(self._bars)}  "
+                f"close_idx={self._bt_close_idx}  pending={self.pending_target}"
+            )
+        elif self._load_bars_from_fg30m():
             pre = self._compute_pending_target() if len(self._bars) >= self.donchian + 5 else 0
             last_dt = self._bars[-1]["datetime"] if self._bars else "?"
             self.write_log(
                 f"信号源 fg_30m 缓存 {len(self._bars)} 根 末根={last_dt} 预算pending={pre}"
             )
         else:
-            days = max(5, (self.bar_window + self.donchian) // 8 + 3)
-            self.load_bar(days)
-            self.write_log(f"信号源 vnpy DB 1m 预载 {days} 天（可能与 fd_vib 不一致）")
-        self.write_log(f"实盘 tick -> {self.bar_minutes}m  tick_add={self.tick_add}")
+            self.load_bar(warm_days)
+            self.write_log(f"信号源 vnpy DB 1m 预载 {warm_days} 天")
+        self.write_log(f"tick/1m -> {self.bar_minutes}m  tick_add={self.tick_add}")
 
     def on_start(self) -> None:
         """vnpy: on_start 时 trading 仍为 False；init 后变量文件会覆盖 pending，须在此重算信号。"""
@@ -158,12 +176,14 @@ class FgVibDonStrategy(TargetPosTemplate):
             self._startup_sync = True
             self._startup_target = int(self.pending_target)
             if self.get_engine_type() == EngineType.BACKTESTING:
-                self.write_log(f"回测待调仓 target={self._startup_target}")
+                pass  # 回测走 parquet 调度，不在 on_start 强平补单
             else:
                 self.write_log(f"启动待补单 target={self._startup_target}（等首笔 tick）")
 
     def _refresh_signal(self) -> None:
         """init 后 vnpy 会从 json 恢复 variables，覆盖 on_init 算出的 pending。"""
+        if self.get_engine_type() == EngineType.BACKTESTING:
+            return
         if self.signal_mode == "json":
             self.pending_target = self._target_from_json()
         elif len(self._bars) >= self.donchian + 5:
@@ -220,11 +240,11 @@ class FgVibDonStrategy(TargetPosTemplate):
                 if self.last_tick.limit_down:
                     short_price = max(short_price, float(self.last_tick.limit_down))
         elif self.last_bar:
-            cp = float(self.last_bar.close_price)
+            op = float(self.last_bar.open_price or self.last_bar.close_price)
             if pos_change > 0:
-                long_price = cp + add
+                long_price = op + add
             else:
-                short_price = cp - add
+                short_price = op - add
         else:
             self.write_log("send_new_order: 无 tick/bar，无法定价")
             return
@@ -328,6 +348,21 @@ class FgVibDonStrategy(TargetPosTemplate):
     def _process_1m_bar(self, bar: BarData) -> None:
         super().on_bar(bar)
         self._sync_startup()
+
+        if self.get_engine_type() == EngineType.BACKTESTING:
+            if self.trading and self._bt_pending_exec is not None:
+                self.last_bar = bar
+                tgt = int(self._bt_pending_exec)
+                self.set_target_pos(tgt)
+                if tgt != 0 and self.pos != 0 and self.entry_price <= 0:
+                    self.entry_price = float(bar.open_price or bar.close_price)
+                    self.peak_pnl = 0.0
+                self._bt_pending_exec = None
+            if self._in_trading_session(bar.datetime):
+                self._try_bt_30m_close(bar)
+            return
+
+        # 仿真/实盘：1m 可 intrabar 止损；BarGenerator 数 30 根合成 30m
         if self.use_risk and self.pos != 0:
             if self._check_stops(bar):
                 self.pending_target = 0
@@ -409,6 +444,98 @@ class FgVibDonStrategy(TargetPosTemplate):
             )
         self.put_event()
 
+    @staticmethod
+    def _resample_30m_fg(rows: list[dict[str, Any]]) -> pd.DataFrame:
+        """与 fg_30m/data.py 相同：日历 30 分钟（非数 30 根 1m）"""
+        if not rows:
+            return pd.DataFrame()
+        df = pd.DataFrame(rows)
+        df["datetime"] = pd.to_datetime(df["datetime"])
+        pdf = df.set_index("datetime")
+        bar = pdf.resample("30min", label="right", closed="right").agg(
+            {"open": "first", "high": "max", "low": "min", "close": "last", "volume": "sum"}
+        )
+        return bar.dropna(subset=["close"]).reset_index()
+
+    def _row_to_bar(self, row: pd.Series) -> BarData:
+        dt = self._naive_dt(row["datetime"])
+        sym = self.vt_symbol.split(".")[0]
+        ex = Exchange.CZCE
+        if "." in self.vt_symbol:
+            try:
+                ex = Exchange(self.vt_symbol.split(".")[1])
+            except ValueError:
+                pass
+        return BarData(
+            gateway_name="BACKTEST",
+            symbol=sym,
+            exchange=ex,
+            datetime=dt,
+            interval=Interval.MINUTE,
+            open_price=float(row["open"]),
+            high_price=float(row["high"]),
+            low_price=float(row["low"]),
+            close_price=float(row["close"]),
+            volume=float(row.get("volume", 0)),
+        )
+
+    def _init_bt_parquet(self) -> None:
+        """回测：预载 fg_30m 全量 30m + 信号（与 fd_vib 同源）"""
+        sym = self.vt_symbol.split(".")[0].upper()
+        cache = Path(self.fd_vib_root).parent / "fg_30m" / "artifacts" / f"bars_30m_{sym}.parquet"
+        if not cache.exists():
+            self.write_log(f"回测无 parquet: {cache}")
+            return
+        df = pd.read_parquet(cache)
+        df["datetime"] = pd.to_datetime(df["datetime"])
+        self._bt_df30 = df
+        if self._combo is None:
+            return
+        sig_kw = {
+            k: v
+            for k, v in self._spec.items()
+            if k not in ("use_risk", "max_lots", "atr_stop_mult", "trail_atr_mult", "max_loss_pct")
+        }
+        sig_kw.setdefault("mode", self.mode)
+        sig_kw.setdefault("donchian", self.donchian)
+        try:
+            self._bt_sig = self._combo.generate(df, **sig_kw)
+            self.write_log(f"回测预计算信号 mode={self.mode}  bars={len(df)}")
+        except Exception as exc:
+            self.write_log(f"回测预计算信号失败: {exc}")
+
+    def _try_bt_30m_close(self, bar: BarData) -> None:
+        if self._bt_df30 is None or self._bt_sig is None:
+            return
+        if self._bt_close_idx >= len(self._bt_df30):
+            return
+        bar_end = pd.Timestamp(self._naive_dt(bar.datetime))
+        expected = pd.Timestamp(self._bt_df30.iloc[self._bt_close_idx]["datetime"])
+        if bar_end < expected:
+            return
+        row = self._bt_df30.iloc[self._bt_close_idx]
+        bar30 = self._row_to_bar(row)
+        idx = self._bt_close_idx
+        self._bt_close_idx += 1
+
+        if self.trading and self.use_risk and self.pos != 0:
+            if self._check_stops(bar30):
+                self.pending_target = 0
+                self._bt_pending_exec = 0
+                self._append_bar(bar30, trim=False)
+                return
+
+        raw = float(self._bt_sig.iloc[idx])
+        self.last_signal = raw
+        lots = int(round(raw))
+        self.pending_target = int(max(-self.max_lots, min(self.max_lots, lots)))
+        self._append_bar(bar30, trim=False)
+
+        if self.trading:
+            # fd_vib: row i 开盘执行 sig[i-1]；本根 idx 收盘 → 下根 1m 开盘执行 sig[idx]
+            exec_tgt = int(max(-self.max_lots, min(self.max_lots, int(round(self._bt_sig.iloc[idx])))))
+            self._bt_pending_exec = exec_tgt
+
     # ------------------------------------------------------------------ fd_vib
 
     def _setup_fd_vib(self) -> None:
@@ -429,6 +556,18 @@ class FgVibDonStrategy(TargetPosTemplate):
                 self._spec = dict(fd_cfg.BALANCED_SPEC)
             elif self.profile == "enhanced":
                 self._spec = dict(fd_cfg.ENHANCED_SPEC)
+            elif self.profile == "smart":
+                self._spec = dict(fd_cfg.SMART_SPEC)
+            elif self.profile == "auto":
+                self._spec = dict(fd_cfg.AUTO_SPEC)
+            elif self.profile == "regime":
+                self._spec = dict(fd_cfg.REGIME_SPEC)
+            elif self.profile == "lms":
+                self._spec = dict(fd_cfg.LMS_SPEC)
+            elif self.profile == "lms_dir":
+                self._spec = dict(fd_cfg.LMS_DIR_SPEC)
+            elif self.profile == "lms_mom":
+                self._spec = dict(fd_cfg.LMS_MOM_SPEC)
             elif tune.exists():
                 data = json.loads(tune.read_text(encoding="utf-8"))
                 self._spec = dict(data["best_score"]["spec"])
@@ -510,7 +649,7 @@ class FgVibDonStrategy(TargetPosTemplate):
             self.write_log(f"读取 fg_30m 缓存失败: {exc}")
             return False
 
-    def _append_bar(self, bar: BarData) -> None:
+    def _append_bar(self, bar: BarData, trim: bool = True) -> None:
         sym = self.vt_symbol.split(".")[0]
         self._bars.append({
             "datetime": self._naive_dt(bar.datetime),
@@ -522,8 +661,9 @@ class FgVibDonStrategy(TargetPosTemplate):
             "symbol": sym,
             "vt_symbol": self.vt_symbol,
         })
-        if len(self._bars) > self.bar_window:
-            self._bars = self._bars[-self.bar_window :]
+        if trim and self.get_engine_type() != EngineType.BACKTESTING:
+            if len(self._bars) > self.bar_window:
+                self._bars = self._bars[-self.bar_window :]
 
     def _bar_df(self) -> pd.DataFrame:
         if not self._bars:

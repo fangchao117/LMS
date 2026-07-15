@@ -1,0 +1,57 @@
+{
+  "ic_train": 0.5112843113914673,
+  "ic_valid": 0.0970926867905142,
+  "ic_test": 0.00984841925672811,
+  "best_iteration": 76,
+  "n_features": 45,
+  "top_features": [
+    {
+      "name": "oi_r_40",
+      "gain": 0
+    },
+    {
+      "name": "std_40",
+      "gain": 0
+    },
+    {
+      "name": "oi_r_10",
+      "gain": 0
+    },
+    {
+      "name": "oi_r_30",
+      "gain": 0
+    },
+    {
+      "name": "corr_ro_40",
+      "gain": 0
+    },
+    {
+      "name": "std_30",
+      "gain": 0
+    },
+    {
+      "name": "corr_ro_20",
+      "gain": 0
+    },
+    {
+      "name": "std_20",
+      "gain": 0
+    },
+    {
+      "name": "ret_10",
+      "gain": 0
+    },
+    {
+      "name": "corr_ro_5",
+      "gain": 0
+    },
+    {
+      "name": "corr_ro_30",
+      "gain": 0
+    },
+    {
+      "name": "ret_5",
+      "gain": 0
+    }
+  ]
+}

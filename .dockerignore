@@ -1,0 +1,11 @@
+# Docker build ignore (repo root context)
+**/__pycache__
+**/*.pyc
+**/.git
+**/.claude
+**/node_modules
+quant_platform/frontend/dist
+quant_platform/frontend/node_modules
+**/*.log
+fg_model/gm_token.txt
+.env

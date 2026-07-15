@@ -6,6 +6,7 @@ import numpy as np
 
 import academic
 import commodity
+import discovered
 import fundamental
 import glass
 import gtja
@@ -24,6 +25,7 @@ TIERS: dict[str, dict] = {
     "tier4": {"label": "扩展研究", "module": research, "prefixes": ("res_",)},
     "tier5": {"label": "投机专用", "module": speculator, "prefixes": ("spec_",)},
     "tier6": {"label": "玻璃专项", "module": glass, "prefixes": ("glass_",)},
+    "tier7": {"label": "训练产出", "module": discovered, "prefixes": ("disc_",)},
 }
 
 

@@ -1,3 +1,8 @@
 __pycache__/
 *.pyc
 *.pyo
+fg_model/gm_token.txt
+quant_platform/logs/nginx/*.log
+quant_platform/logs/backups/*.tar.gz
+quant_platform/logs/backups/*.zip
+!quant_platform/logs/**/.gitkeep

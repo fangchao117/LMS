@@ -28,6 +28,18 @@ def load_best_spec(profile: str = "max") -> dict:
         return dict(config.BALANCED_SPEC)
     if profile == "enhanced":
         return dict(config.ENHANCED_SPEC)
+    if profile == "smart":
+        return dict(config.SMART_SPEC)
+    if profile == "auto":
+        return dict(config.AUTO_SPEC)
+    if profile == "regime":
+        return dict(config.REGIME_SPEC)
+    if profile == "lms":
+        return dict(config.LMS_SPEC)
+    if profile == "lms_dir":
+        return dict(config.LMS_DIR_SPEC)
+    if profile == "lms_mom":
+        return dict(config.LMS_MOM_SPEC)
     if tune_path.exists():
         data = json.loads(tune_path.read_text(encoding="utf-8"))
         return dict(data["best_score"]["spec"])
@@ -154,8 +166,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true", help="跳过 tune")
     ap.add_argument("--live", action="store_true", help="仅输出盘后信号")
-    ap.add_argument("--profile", choices=["max", "balanced", "enhanced"], default="max",
-                    help="max=收益最大化 balanced=低回撤 enhanced=因子过滤")
+    ap.add_argument("--profile", choices=["max", "smart", "auto", "regime", "balanced", "enhanced", "lms", "lms_dir", "lms_mom"], default="smart",
+                    help="smart=每段auto/regime(推荐) regime=震荡趋势 auto=自校准Don lms=方向+动能")
     args = ap.parse_args()
 
     if args.live:

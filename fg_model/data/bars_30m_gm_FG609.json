@@ -1,0 +1,12 @@
+{
+  "source": "eastmoney_gm",
+  "frequency": "1800s",
+  "symbol": "FG609",
+  "gm_code": "CZCE.FG609",
+  "start": "2026-01-10",
+  "end": "2026-07-08",
+  "bars": 1376,
+  "datetime_min": "2026-01-12 09:00:00+08:00",
+  "datetime_max": "2026-07-07 22:30:00+08:00",
+  "path": "D:\\LMS\\fg_model\\data\\bars_30m_gm_FG609.parquet"
+}

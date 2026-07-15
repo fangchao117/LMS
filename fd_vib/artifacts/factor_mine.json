@@ -2,18 +2,18 @@
   "n_factors": 93,
   "by_tier": {
     "tier1": [
-      "fund_oi_z20",
       "fund_oi_mom5",
+      "fund_oi_z20",
       "fund_oi_level_rank",
       "fund_inventory_proxy",
-      "fund_vol_ratio",
-      "fund_price_oi_div"
+      "fund_price_oi_div",
+      "fund_vol_ratio"
     ],
     "tier2": [
       "comm_basis_mom",
       "comm_term_slope",
-      "comm_tsmom_20d",
       "comm_basis_proxy",
+      "comm_tsmom_20d",
       "comm_vol_20",
       "comm_skew_mom"
     ],
@@ -21,9 +21,9 @@
       "gtja_031",
       "gtja_127",
       "gtja_034",
-      "acad_strev",
+      "gtja_046",
       "gtja_018",
-      "gtja_046"
+      "acad_strev"
     ],
     "tier4": [
       "res_mean_revert_z",
@@ -45,8 +45,8 @@
       "glass_ma_stack",
       "glass_liq_shock",
       "glass_oi_extreme",
-      "glass_chop_filter",
       "glass_weekday",
+      "glass_chop_filter",
       "glass_fg00_mom"
     ]
   },
@@ -55,80 +55,80 @@
       "name": "glass_ma_stack",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": -0.08290207355058073,
-      "abs_ic": 0.08290207355058073,
+      "ic": -0.09227193372369158,
+      "abs_ic": 0.09227193372369158,
       "sign": -1
     },
     {
       "name": "glass_liq_shock",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": -0.05459302589428869,
-      "abs_ic": 0.05459302589428869,
+      "ic": -0.06227384703184154,
+      "abs_ic": 0.06227384703184154,
       "sign": -1
     },
     {
       "name": "glass_oi_extreme",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": -0.036607626737578114,
-      "abs_ic": 0.036607626737578114,
+      "ic": -0.037745330552688194,
+      "abs_ic": 0.037745330552688194,
+      "sign": -1
+    },
+    {
+      "name": "glass_weekday",
+      "tier": "tier6",
+      "tier_label": "玻璃专项",
+      "ic": -0.03013878637405743,
+      "abs_ic": 0.03013878637405743,
       "sign": -1
     },
     {
       "name": "glass_chop_filter",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": 0.02948815232097199,
-      "abs_ic": 0.02948815232097199,
+      "ic": 0.027120195140254138,
+      "abs_ic": 0.027120195140254138,
       "sign": 1
-    },
-    {
-      "name": "glass_weekday",
-      "tier": "tier6",
-      "tier_label": "玻璃专项",
-      "ic": -0.02763716918102042,
-      "abs_ic": 0.02763716918102042,
-      "sign": -1
     },
     {
       "name": "glass_fg00_mom",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": 0.023983843693110796,
-      "abs_ic": 0.023983843693110796,
-      "sign": 1
-    },
-    {
-      "name": "glass_turnover_ratio",
-      "tier": "tier6",
-      "tier_label": "玻璃专项",
-      "ic": 0.0225462875047104,
-      "abs_ic": 0.0225462875047104,
+      "ic": 0.02423352581497941,
+      "abs_ic": 0.02423352581497941,
       "sign": 1
     },
     {
       "name": "glass_night_bias",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": 0.020419034789096485,
-      "abs_ic": 0.020419034789096485,
+      "ic": 0.02047799035289172,
+      "abs_ic": 0.02047799035289172,
+      "sign": 1
+    },
+    {
+      "name": "glass_turnover_ratio",
+      "tier": "tier6",
+      "tier_label": "玻璃专项",
+      "ic": 0.02026705498978989,
+      "abs_ic": 0.02026705498978989,
       "sign": 1
     },
     {
       "name": "glass_gap",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": -0.019409282908071302,
-      "abs_ic": 0.019409282908071302,
+      "ic": -0.018224000992048097,
+      "abs_ic": 0.018224000992048097,
       "sign": -1
     },
     {
-      "name": "glass_body_ratio",
+      "name": "glass_vol_regime",
       "tier": "tier6",
       "tier_label": "玻璃专项",
-      "ic": 0.015405679459452808,
-      "abs_ic": 0.015405679459452808,
+      "ic": 0.01654826068380837,
+      "abs_ic": 0.01654826068380837,
       "sign": 1
     }
   ],
@@ -137,160 +137,160 @@
       "name": "gtja_031",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": -0.10991534478755995,
-      "abs_ic": 0.10991534478755995,
+      "ic": -0.11650233131711463,
+      "abs_ic": 0.11650233131711463,
       "sign": -1
     },
     {
       "name": "gtja_127",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": 0.10991534478755995,
-      "abs_ic": 0.10991534478755995,
+      "ic": 0.11650233131711463,
+      "abs_ic": 0.11650233131711463,
       "sign": 1
     },
     {
       "name": "gtja_034",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": 0.10990958266444252,
-      "abs_ic": 0.10990958266444252,
+      "ic": 0.11649548767377145,
+      "abs_ic": 0.11649548767377145,
       "sign": 1
     },
     {
-      "name": "acad_strev",
+      "name": "gtja_046",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": 0.10448570442415657,
-      "abs_ic": 0.10448570442415657,
+      "ic": 0.11175600292561404,
+      "abs_ic": 0.11175600292561404,
       "sign": 1
     },
     {
       "name": "gtja_018",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": -0.10443313734516434,
-      "abs_ic": 0.10443313734516434,
+      "ic": -0.10899751989482942,
+      "abs_ic": 0.10899751989482942,
       "sign": -1
     },
     {
-      "name": "gtja_046",
+      "name": "acad_strev",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": 0.10326737190337465,
-      "abs_ic": 0.10326737190337465,
+      "ic": 0.1088572534364364,
+      "abs_ic": 0.1088572534364364,
       "sign": 1
     },
     {
       "name": "gtja_063",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": -0.09951118695369539,
-      "abs_ic": 0.09951118695369539,
+      "ic": -0.10793841226684434,
+      "abs_ic": 0.10793841226684434,
       "sign": -1
     },
     {
       "name": "comm_basis_mom",
       "tier": "tier2",
       "tier_label": "商品学术",
-      "ic": -0.09714138723568065,
-      "abs_ic": 0.09714138723568065,
+      "ic": -0.10238612793921008,
+      "abs_ic": 0.10238612793921008,
+      "sign": -1
+    },
+    {
+      "name": "gtja_151",
+      "tier": "tier3",
+      "tier_label": "GitHub因子库",
+      "ic": -0.09931183363551094,
+      "abs_ic": 0.09931183363551094,
       "sign": -1
     },
     {
       "name": "comm_term_slope",
       "tier": "tier2",
       "tier_label": "商品学术",
-      "ic": 0.09482205863703977,
-      "abs_ic": 0.09482205863703977,
+      "ic": 0.09447413186641838,
+      "abs_ic": 0.09447413186641838,
       "sign": 1
-    },
-    {
-      "name": "gtja_151",
-      "tier": "tier3",
-      "tier_label": "GitHub因子库",
-      "ic": -0.08970501798194828,
-      "abs_ic": 0.08970501798194828,
-      "sign": -1
     },
     {
       "name": "gtja_041",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": -0.07513579979682079,
-      "abs_ic": 0.07513579979682079,
+      "ic": -0.07905784335852874,
+      "abs_ic": 0.07905784335852874,
       "sign": -1
     },
     {
       "name": "gtja_143",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": -0.06338579206510934,
-      "abs_ic": 0.06338579206510934,
-      "sign": -1
-    },
-    {
-      "name": "gtja_058",
-      "tier": "tier3",
-      "tier_label": "GitHub因子库",
-      "ic": -0.05741295135419032,
-      "abs_ic": 0.05741295135419032,
+      "ic": -0.07178891397395645,
+      "abs_ic": 0.07178891397395645,
       "sign": -1
     },
     {
       "name": "gtja_171",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": 0.05689629649100186,
-      "abs_ic": 0.05689629649100186,
+      "ic": 0.06555576827887023,
+      "abs_ic": 0.06555576827887023,
       "sign": 1
+    },
+    {
+      "name": "gtja_058",
+      "tier": "tier3",
+      "tier_label": "GitHub因子库",
+      "ic": -0.06388443057910548,
+      "abs_ic": 0.06388443057910548,
+      "sign": -1
     },
     {
       "name": "gtja_101",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": -0.05368426239497899,
-      "abs_ic": 0.05368426239497899,
+      "ic": -0.06227060445609274,
+      "abs_ic": 0.06227060445609274,
       "sign": -1
-    },
-    {
-      "name": "gtja_111",
-      "tier": "tier3",
-      "tier_label": "GitHub因子库",
-      "ic": -0.05245516613650345,
-      "abs_ic": 0.05245516613650345,
-      "sign": -1
-    },
-    {
-      "name": "acad_rsi14",
-      "tier": "tier3",
-      "tier_label": "GitHub因子库",
-      "ic": 0.04935970365912499,
-      "abs_ic": 0.04935970365912499,
-      "sign": 1
     },
     {
       "name": "gtja_184",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": -0.047809858829799386,
-      "abs_ic": 0.047809858829799386,
+      "ic": -0.057907449200512204,
+      "abs_ic": 0.057907449200512204,
       "sign": -1
     },
     {
       "name": "gtja_053",
       "tier": "tier3",
       "tier_label": "GitHub因子库",
-      "ic": 0.04637628534796109,
-      "abs_ic": 0.04637628534796109,
+      "ic": 0.05305119999536007,
+      "abs_ic": 0.05305119999536007,
       "sign": 1
+    },
+    {
+      "name": "acad_rsi14",
+      "tier": "tier3",
+      "tier_label": "GitHub因子库",
+      "ic": 0.05299013452803905,
+      "abs_ic": 0.05299013452803905,
+      "sign": 1
+    },
+    {
+      "name": "comm_basis_proxy",
+      "tier": "tier2",
+      "tier_label": "商品学术",
+      "ic": -0.04359109903998244,
+      "abs_ic": 0.04359109903998244,
+      "sign": -1
     },
     {
       "name": "comm_tsmom_20d",
       "tier": "tier2",
       "tier_label": "商品学术",
-      "ic": 0.04293996924620361,
-      "abs_ic": 0.04293996924620361,
+      "ic": 0.04279779583003133,
+      "abs_ic": 0.04279779583003133,
       "sign": 1
     }
   ]

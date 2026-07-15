@@ -1,0 +1,8 @@
+{
+  "signal_name": "FG609_lgb_test",
+  "rows": 795,
+  "segment": "TEST",
+  "signal_mean": -0.0003975443757001256,
+  "signal_std": 0.00010469891169132014,
+  "path": "D:\\LMS\\vnpy_ai\\lab\\signal\\FG609_lgb_test.parquet"
+}

@@ -1,0 +1,15 @@
+{
+  "source": "eastmoney_gm",
+  "symbol": "FG609",
+  "gm_path": "D:\\LMS\\fg_model\\data\\bars_30m_gm_FG609.parquet",
+  "train_bars_path": "D:\\LMS\\fg_model\\data\\train_bars_30m.parquet",
+  "bars": 1376,
+  "datetime_min": "2026-01-12 01:00:00",
+  "datetime_max": "2026-07-07 14:30:00",
+  "wf_oos_start": "2026-03-17",
+  "wf_min_train_bars": 481,
+  "train_end": "2026-04-20",
+  "valid_end": "2026-05-27",
+  "test_start": "2026-05-27",
+  "note": "仅 fg_model 训练用，不影响 fd_vib"
+}

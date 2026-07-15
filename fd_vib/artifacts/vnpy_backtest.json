@@ -1,0 +1,32 @@
+{
+  "symbol": "FG605",
+  "start": "2025-12-15",
+  "end": "2026-04-14",
+  "profile": "smart",
+  "segment": {
+    "start": "2025-12-15",
+    "end": "2026-04-14"
+  },
+  "vnpy": {
+    "bars": 1155,
+    "total_return_pct": 17.406520000000004,
+    "max_ddpercent": -23.41289256829663,
+    "total_trades": 60,
+    "total_commission": 139.34799999999998,
+    "total_slippage": 1300.0,
+    "end_balance": 11740.652,
+    "sharpe_ratio": 0.8117896197753347
+  },
+  "fd_vib": {
+    "bars": 1140,
+    "capital": 10000.0,
+    "end_equity": 15442.4,
+    "total_return_pct": 54.42400000000001,
+    "max_ddpercent": -58.242195876604484,
+    "sharpe_ratio": 3.812941751399708,
+    "total_trades": 55,
+    "stop_hits": 23,
+    "roll_closes": 0,
+    "max_lots": 2
+  }
+}
