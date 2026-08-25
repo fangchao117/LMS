@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T15:10:09",
-  "bar_time": "2026-07-15 15:00:00",
+  "generated_at": "2026-08-25T15:10:07",
+  "bar_time": "2026-07-20 15:00:00",
   "dominant_symbol": "FG609",
   "vt_symbol": "FG609.CZCE",
   "segment": {
@@ -11,11 +11,11 @@
     "current": "FG609",
     "segment_start": "2026-04-15",
     "segment_end": "2026-08-14",
-    "days_to_roll": 30,
+    "days_to_roll": -11,
     "next_symbol": "FG701",
     "action_on_roll": "平旧仓 → 新合约按信号开仓"
   },
-  "roll_hint": "hold",
+  "roll_hint": "距换月 -11 天，换月日需平 FG609 再开 FG701",
   "strategy": {
     "mode": "don_smart",
     "donchian": 38,
